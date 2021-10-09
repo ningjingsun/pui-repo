@@ -34,7 +34,7 @@
 }
 @font-face {
     font-family: neuehaas;
-    font-style: roman;
+    font-style: normal;
     src: url(fonts/neuehaas.ttf);
 }
 body{
@@ -107,7 +107,7 @@ a{
 }
 p{
     font-family: neuehaas;
-    font-style: roman;
+    font-style: normal;
     font-size: 1.7vw;
     line-height: 2.1vw;
 }
@@ -131,7 +131,7 @@ p{
 }
 .smalltext{
     font-family: neuehaas;
-    font-style: roman;
+    font-style: normal;
     font-size: 1.1vw;
     line-height: 1.7vw;
 }
@@ -259,7 +259,7 @@ p{
     width: 13.8vw;
     height: 3vw;
     font-family: neuehaas;
-    font-style: roman;
+    font-style: normal;
     font-size: 1vw;
     line-height: 1.4vw;
     color: rgb(255, 255, 255);
