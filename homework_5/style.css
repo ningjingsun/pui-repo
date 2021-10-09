@@ -292,6 +292,10 @@ input[type=number]{
     padding-left: 1vw;
 }
 .selectlabel{
+    font-family: neuehaas;
+    font-style: roman;
+    font-size: 1.1vw;
+    line-height: 1.7vw;
     width: 6vw;
     text-align: right;
 }
