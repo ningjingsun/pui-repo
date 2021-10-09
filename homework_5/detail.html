@@ -24,7 +24,7 @@
 
         <div id=navigation>
             <a href="product.html">
-            <p class=navigation style="text-align: center; font-size: 1.7vw; line-height: 2vw">Dog <img style="display: inline" src="img/arrow-right.png" height="20px" alt="arrow-right"> Harness</p>
+            <p class=navigation style="text-align: center; font-size: 1.7vw; line-height: 2vw">Dog <img style="display: inline" src="img/arrow-right.png" height="20" alt="arrow-right"> Harness</p>
             </a>
         </div>
 
@@ -42,9 +42,9 @@
                 <br>
                 <br>
                 <div style="text-align: center" class="selectbox">
-                    <label for="color" class=smalltext class=selectlabel>Color:&ensp;</label>
+                    <label for="color" id="color" class=smalltext class=selectlabel>Color:&ensp;</label>
                     <select name="color" id="choosecolor" class=smalltext class=selectoption>
-                        <option value="strawberry"selected>&ensp;Strawberry</option>
+                        <option value="strawberry" selected>&ensp;Strawberry</option>
                         <option value="blackberry">&ensp;Blackberry</option>
                         <option value="crazyberry">&ensp;Crazyberry</option>
                         <option value="fireorange">&ensp;Fire Orange</option>
@@ -52,9 +52,9 @@
                 </div>
                 <br>
                 <div style="text-align: center" class="selectbox">
-                    <label for="size" class=smalltext class=selectlabel>&ensp;Size:&ensp;</label>
+                    <label for="size" id="size" class=smalltext class=selectlabel>&ensp;Size:&ensp;</label>
                     <select name="size" id="choosesize" class=smalltext class=selectoption>
-                        <option value="tiny"selected>&ensp;Tiny</option>
+                        <option value="tiny" selected>&ensp;Tiny</option>
                         <option value="small">&ensp;Small</option>
                         <option value="medium">&ensp;Medium</option>
                         <option value="large">&ensp;Large</option>
@@ -63,7 +63,7 @@
                 <br>
                 <div style="text-align: center; margin-left: -1.6vw" class="selectbox">
                     <form action="/action_page.php">
-                        <label for="quantity" class=smalltext class=selectlabel>Quantity:&ensp;</label>
+                        <label for="quantity" id="quantity" class=smalltext class=selectlabel>Quantity:&ensp;</label>
                         <input type="number" id="quantity choosenumber" name="quantity" min="1" max="12">
                     </form>
                     <input type="button" id="addtocart" onclick="alert('Product added to cart!')" value="Add to Cart">
