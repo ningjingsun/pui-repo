@@ -24,3 +24,18 @@ function changeColor() {
         harness.setAttribute('onmouseout', "this.src='img/fireorange.png';");
     }
 }
+
+function changeSize(){
+    var choosesize = document.getElementById("choosesize");
+    var selectedSize = choosesize.options[choosesize.selectedIndex].value;
+    var productprice = document.getElementById("productprice");
+    if (selectedSize == "tiny") {
+        productprice.innerHTML = "$15.99";
+    } else if (selectedSize == "small") {
+        productprice.innerHTML = "$19.99";
+    } else if (selectedSize == "medium") {
+        productprice.innerHTML = "$23.99";
+    } else if (selectedSize == "large") {
+        productprice.innerHTML = "$25.99";
+    }
+}
