@@ -131,8 +131,8 @@ p{
     line-height: 1.7vw;
 }
 #footer{
-    padding-left: 12vw;
-    padding-right: 12vw;
+    padding-left: 8vw;
+    padding-right: 8vw;
     padding-bottom: 4vw;
 }
 #storeinfo{
@@ -251,7 +251,7 @@ p{
     align-items: center;
 }
 #addtocart{
-    width: 13.8vw;
+    width: 10vw;
     height: 3vw;
     font-family: neuehaas;
     font-style: normal;
@@ -267,19 +267,16 @@ p{
     cursor: pointer;
 }
 #choosecolor{
-    width: 20vw;
+    width: 16vw;
     height: 3vw;
-    padding-left: 1vw;
 }
 #choosesize{
-    width: 20vw;
+    width: 16vw;
     height: 3vw;
-    padding-left: 1vw;
 }
 .choosenumber{
-    width: 20vw;
+    width: 16vw;
     height: 3vw;
-    padding-left: 1vw;
 }
 input[type=number]{
     width: 4vw;
@@ -316,16 +313,16 @@ input[type=number]{
     align-content: flex-start;
     row-gap: 2vw;
     column-gap: 2vw;
-    margin-left: 6vw;
-    margin-right: 5vw;
+    margin-left: 8vw;
+    margin-right: 8vw;
     margin-top: 7vw;
     margin-bottom: 5vw;
 }
 #product_added{
-    width: 50vw;
+    width: 54vw;
 }
 #price{
-    width: 30vw;
+    width: 20vw;
 }
 #price_flex{
     display: flex;
@@ -350,4 +347,30 @@ input[type=number]{
 }
 #checkout:hover{
     cursor: pointer;
+}
+
+#product_template{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    margin-bottom: 2vw;
+    /* display: none; */
+}
+.product_img{
+    width: 15vw;
+    margin-right: 3vw;
+}
+.product_info{
+    width: 26vw;
+}
+input[type='number']{
+    height: 20px;
+} 
+.btn-remove-item{
+    padding: 0;
+    margin-top: 22px;
+    height: 20px;
 }
