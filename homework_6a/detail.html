@@ -30,7 +30,7 @@
 
         <div id=product>
             <div id=productimage class=productchild>
-                <img src="img/productdetail.png" onmouseover="this.src='img/productshow.png';" onmouseout="this.src='img/productdetail.png';" alt="productdetail">
+                <img id="harnessImage" src="img/productdetail.png" onmouseover="this.src='img/productshow.png';" onmouseout="this.src='img/productdetail.png';" alt="productdetail">
             </div>
             <div id=productinfo class=productchild>
                 <br>
@@ -43,13 +43,13 @@
                 <br>
                 <div style="text-align: center" class="selectbox">
                     <label for="choosecolor" class=selectlabel>Color:&ensp;</label>
-                    <select name="color" id="choosecolor" class=smalltext>
+                    <select name="color" id="choosecolor" class=smalltext onchange="changeColor();">
                         <option value="strawberry" selected>&ensp;Strawberry</option>
                         <option value="blackberry">&ensp;Blackberry</option>
                         <option value="crazyberry">&ensp;Crazyberry</option>
                         <option value="fireorange">&ensp;Fire Orange</option>
                     </select>
-                </div>
+                </div>                 
                 <br>
                 <div style="text-align: center" class="selectbox">
                     <label for="choosesize" class=selectlabel>&ensp;Size:&ensp;</label>
