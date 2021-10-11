@@ -24,25 +24,74 @@
 
         <div id=cart_content>
             <div id=product_added>
-                <p class=navigation style="font-size: 1.7vw; margin-bottom: 1.4vw">Your Cart</p>
+                <p class=navigation style="font-size: 1.7vw">Your Cart <span id=quantity>(0)</span></p>
+                <br>
+                <div style="width: 100%; border-style: none none solid none; border-width: 1px"></div>
+                <br>
+                <br>
+                <div class="cart_item" id="product_template">
+                    <img class="product_img" src="img/productdetail.png" onerror="this.src='assets/other.jpg'">
+                    <div class="product_info">
+                        <div class="product_name"><p class=navigation style="font-size: 1.7vw; line-height: 3.4vw">Soft Vest Dog Harness</p></div>
+                        <div class="product_price"><p class=smalltext>$10.00</p></div>
+                        <div class="product_info"><p class=smalltext>Color: Fire Orange;&ensp;Size: Small</p></div>
+                        <form action="/action_page.php">
+                            <label for="quantity" class=selectlabel>Quantity:&ensp;</label>
+                            <input class="productquantity" type="number" id="quantity" class="choosenumber" name="quantity" min="1" max="12" value="1">
+                        </form>
+                        <!-- <p class="smalltext btn-remove-item" style="color: red">Cancel</p> -->
+                    </div>
+                    <!-- <button class="btn-remove-item">X</button> -->
+                    <img class="icon btn-remove-item" src="img/close.png" alt="close">
+                </div>
+                <div class="cart_item" id="product_template">
+                    <img class="product_img" src="img/productdetail.png" onerror="this.src='assets/other.jpg'">
+                    <div class="product_info">
+                        <div class="product_name"><p class=navigation style="font-size: 1.7vw; line-height: 3.4vw">Soft Vest Dog Harness</p></div>
+                        <div class="product_price"><p class=smalltext>$10.00</p></div>
+                        <div class="product_info"><p class=smalltext>Color: Fire Orange;&ensp;Size: Small</p></div>
+                        <form action="/action_page.php">
+                            <label for="quantity" class=selectlabel>Quantity:&ensp;</label>
+                            <input class="productquantity" type="number" id="quantity" class="choosenumber" name="quantity" min="1" max="12" value="1">
+                        </form>
+                        <!-- <p class="smalltext btn-remove-item" style="color: red">Cancel</p> -->
+                    </div>
+                    <!-- <button class="btn-remove-item">X</button> -->
+                    <img class="icon btn-remove-item" src="img/close.png" alt="close">
+                </div>
             </div>
 
             <div id=price>
-                <p class=navigation style="font-size: 1.7vw; margin-bottom: 1.4vw">Order Summary</p>
+                <p class=navigation style="font-size: 1.7vw">Order Summary</p>
+                <br>
+                <div style="width: 100%; border-style: none none solid none; border-width: 1px"></div>
+                <br>
                 <div id=price_flex>
                     <div id=price_title>
-                        <p style="line-height: 2.8vw">Subtotal:</p>
-                        <p style="line-height: 2.8vw">Estimated Shipping:</p>
-                        <p style="line-height: 2.8vw">Total before Tax:</p>
+                        <p style="line-height: 2.4vw" class=smalltext>Subtotal:</p>
+                        <p style="line-height: 2.4vw" class=smalltext>Estimated Shipping:</p>
+                        <p style="line-height: 2.4vw" class=smalltext>Total before Tax:</p>
                     </div>
                     <div id=price_digit>
-                        <p id="subtotal" style="text-align: right; line-height: 2.8vw">$0.0</p>
-                        <p id="shipping" style="text-align: right; line-height: 2.8vw">$0.0</p>
-                        <p id="total" style="text-align: right; line-height: 2.8vw">$0.0</p>
+                        <p id="subtotal" style="text-align: right; line-height: 2.4vw" class=smalltext>$0.0</p>
+                        <p id="shipping" style="text-align: right; line-height: 2.4vw" class=smalltext>$0.0</p>
+                        <p id="total" style="text-align: right; line-height: 2.4vw" class=smalltext>$0.0</p>
                     </div>
                 </div>
                 <input type="button" id="checkout" onclick="alert('Direct to Payment')" value="Proceed to Checkout">
             </div>
+        </div>
+
+        <div id=footer>
+            <br>
+            <div style="width: 100%; border-style: none none solid none; border-width: 1px"></div>
+            <br>
+            <p class="smalltext" style="text-align: center">
+            Pre-existing conditions are not covered. Waiting periods, annual deductible, co-insurance, benefit limits and exclusions may apply. Products, schedules, discounts, and rates may vary and are subject to change. More information available at checkout. Enroll at muddypaws.com/product/insurance.
+            <br>
+            <br>
+            ©2021 Muddy Paws Adventure Gears, Inc. All rights reserved
+            </p>
         </div>
 
         <div class=hamburger>
