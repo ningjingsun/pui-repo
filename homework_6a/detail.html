@@ -38,7 +38,7 @@
                 <br>
                 <p class=smalltitle style="text-align: center">Soft Vest Dog Harness</p>
                 <br>
-                <p style="text-align: center">$19.99</p>
+                <p style="text-align: center" id="productprice">$19.99</p>
                 <br>
                 <br>
                 <div style="text-align: center" class="selectbox">
@@ -53,9 +53,9 @@
                 <br>
                 <div style="text-align: center" class="selectbox">
                     <label for="choosesize" class=selectlabel>&ensp;Size:&ensp;</label>
-                    <select name="size" id="choosesize" class=smalltext>
-                        <option value="tiny" selected>&ensp;Tiny</option>
-                        <option value="small">&ensp;Small</option>
+                    <select name="size" id="choosesize" class=smalltext onchange="changeSize();">
+                        <option value="tiny">&ensp;Tiny</option>
+                        <option value="small" selected>&ensp;Small</option>
                         <option value="medium">&ensp;Medium</option>
                         <option value="large">&ensp;Large</option>
                     </select>
