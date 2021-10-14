@@ -375,3 +375,14 @@ input[type='number']{
     margin-top: 22px;
     height: 20px;
 }
+
+#cartNumber{
+    background-color: rgb(30, 30, 30);
+    border-radius: 100%;
+    width: 1.5vw;
+    height: 1.5vw;
+    margin-left: 10vw;
+    margin-top: -3.2vw;
+    z-index: 100;
+    opacity: 0;
+}
