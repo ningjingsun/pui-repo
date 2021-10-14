@@ -2,6 +2,23 @@ $(".menu").click(function(){
     $(".hamburger").toggleClass("hamburger_open");
 });
 
+const quantity = []
+
+function addToCart(){
+    var selectedQuantity = document.getElementById("choosequantity").value;
+    quantity.push(selectedQuantity);
+    let totalQuantity = 0;
+    for (element of quantity){
+        totalQuantity += element;
+    }
+    // return totalQuantity;
+    if (totalQuantity > 0){
+        $("#cartNumber").css("opacity: 1");
+    } else {
+        $("#cartNumber").css("opacity: 0");
+    }
+}
+
 function changeColor() {
     var choosecolor = document.getElementById("choosecolor");
     var selectedColor = choosecolor.options[choosecolor.selectedIndex].value;
