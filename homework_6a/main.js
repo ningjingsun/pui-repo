@@ -1,21 +1,27 @@
+const quantity = [];
+
 $(".menu").click(function(){
     $(".hamburger").toggleClass("hamburger_open");
 });
 
-const quantity = []
-
 function addToCart(){
     var selectedQuantity = document.getElementById("choosequantity").value;
     quantity.push(selectedQuantity);
+    document.getElementById("updateCartNumber").innerHTML = "";
     let totalQuantity = 0;
     for (element of quantity){
-        totalQuantity += element;
+        totalQuantity += parseInt(element);
+        // convert string to number. Otherwise + will only do string concatenation, since the values are string
+        console.log(element);
+        console.log(totalQuantity);
+        console.log(quantity);
     }
-    // return totalQuantity;
     if (totalQuantity > 0){
-        $("#cartNumber").css("opacity: 1");
+        $("#cartNumber").css("opacity", "1");
+        document.getElementById("updateCartNumber").innerHTML = totalQuantity;
     } else {
-        $("#cartNumber").css("opacity: 0");
+        $("#cartNumber").css("opacity", "0");
+        console.log('0');
     }
 }
 
