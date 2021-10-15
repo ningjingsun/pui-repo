@@ -350,7 +350,7 @@ input[type=number]{
     cursor: pointer;
 }
 
-#product_template{
+.product_template{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
