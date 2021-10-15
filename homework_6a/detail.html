@@ -18,10 +18,10 @@
                 <img class="icon" src="img/search.png" alt="search">
                 <img class="icon" src="img/me.png" alt="me">
                 <a href="cart.html"><img class="icon" src="img/shopping.png" alt="shopping"></a>
-                <div id=cartNumber></div>
                 <a href="index.html"><img src="img/logo.png" style="position: absolute; left: 18vw; top: 1.6vw; max-height: 7vw" alt="logo"></a>
             </div>
         </div>
+        <div id=cartNumber><p id=updateCartNumber></p></div>
 
         <div id=navigation>
             <a href="product.html">
@@ -67,7 +67,7 @@
                         <label for="quantity" class=selectlabel>Quantity:&ensp;</label>
                         <input type="number" id="choosequantity" class="choosenumber" name="quantity" min="1" max="12" value="1">
                     </form>
-                    <input type="button" id="addtocart" onclick="addToCart()" onclick="alert('Product added to cart!')" value="Add to Cart">
+                    <input type="button" id="addtocart" onclick="addToCart()" value="Add to Cart">
                 </div>
             </div>
         </div>
