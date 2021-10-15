@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <script src="main.js" type="text/javascript"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <title>Muddy Paw Adventure Gears</title>
+    </head>
+
+    <body onload="checkOnload()">
+        <div id=header>
+            <div id=header_left>
+                <img class="icon menu" style="height: 30px" src="img/menu.png" alt="menu">
+            </div>
+            <div id=header_right>
+                <img class="icon" src="img/search.png" alt="search">
+                <img class="icon" src="img/me.png" alt="me">
+                <a href="cart.html"><img class="icon" src="img/shopping.png" alt="shopping"></a>
+                <a href="index.html"><img src="img/logo.png" style="position: absolute; left: 18vw; top: 1.6vw; max-height: 7vw" alt="logo"></a>
+            </div>
+        </div>
+        <div id=cartNumber><p id=updateCartNumber></p></div>
+
+        <div id=navigation>
+            <a href="product.html">
+            <p class=navigation style="text-align: center; font-size: 1.7vw; line-height: 2vw">Dog <img style="display: inline" src="img/arrow-right.png" height="20" alt="arrow-right"> Harness</p>
+            </a>
+        </div>
+
+        <div id=product>
+            <div id=productimage class=productchild>
+                <img id="harnessImage" src="img/productdetail.png" onmouseover="this.src='img/productshow.png';" onmouseout="this.src='img/productdetail.png';" alt="productdetail">
+            </div>
+            <div id=productinfo class=productchild>
+                <br>
+                <br>
+                <br>
+                <p class=smalltitle style="text-align: center" id="productName">Soft Vest Dog Harness</p>
+                <br>
+                <p style="text-align: center" id="productprice">$19.99</p>
+                <br>
+                <br>
+                <div style="text-align: center" class="selectbox">
+                    <label for="choosecolor" class=selectlabel>Color:&ensp;</label>
+                    <select name="color" id="choosecolor" class=smalltext onchange="changeColor();">
+                        <option value="strawberry" selected>&ensp;Strawberry</option>
+                        <option value="blackberry">&ensp;Blackberry</option>
+                        <option value="crazyberry">&ensp;Crazyberry</option>
+                        <option value="fireorange">&ensp;Fire Orange</option>
+                    </select>
+                </div>                 
+                <br>
+                <div style="text-align: center" class="selectbox">
+                    <label for="choosesize" class=selectlabel>&ensp;Size:&ensp;</label>
+                    <select name="size" id="choosesize" class=smalltext onchange="changeSize();">
+                        <option value="tiny">&ensp;Tiny</option>
+                        <option value="small" selected>&ensp;Small</option>
+                        <option value="medium">&ensp;Medium</option>
+                        <option value="large">&ensp;Large</option>
+                    </select>
+                </div>
+                <br>
+                <div style="text-align: center; margin-left: 1vw" class="selectbox">
+                    <form action="/action_page.php">
+                        <label for="quantity" class=selectlabel>Quantity:&ensp;</label>
+                        <input type="number" id="choosequantity" class="choosenumber" name="quantity" min="1" max="12" value="1">
+                    </form>
+                    <input type="button" id="addtocart" onclick="addToCart()" value="Add to Cart">
+                </div>
+            </div>
+        </div>
+
+        <div id=description>
+            <p class=navigation style="font-size: 1.7vw; line-height: 2vw">Description</p>
+            <br>
+            <br>
+            <div style="width: 100%; border-style: none none solid none; border-width: 1px"></div>
+            <br>
+            <br>
+            <p class=smalltext>Simplicity meets functionality in our Soft Vest Harness (Step-In-Harness) by Puppia. Breathable 100% soft polyester mesh. Comfortable neck. Buckle & Hook-and-loop fastener. Why We Love It: A simple dog harness is a staple for any dog! Comfortable and safe for your precious puppy.
+                <br>
+                &emsp;—&ensp;Soft Vest Dog Harness made out of 100% Polyester
+                <br>
+                &emsp;—&ensp;Inner filler promotes superior comfort
+                <br>
+                &emsp;—&ensp;Puppia rubber label
+                <br>
+                &emsp;—&ensp;Buckle & Hook-and-loop fastener
+                <br>
+                &emsp;—&ensp;Machine washable, but hand washing and air drying are recommended
+                <br>
+                &emsp;—&ensp;Size X-Small: 7.5" neck girth / 9.5"-10.2" chest girth; Size XXX-Large: 17.3" neck girth / 26.8"-27.6" chest girth; Size Large: 12.6" neck girth / 16.1"-16.9" chest girth; Size Medium: 11.0" neck girth / 14.6"-15.4" chest girth; Size Small: 9.5" neck girth / 11.8"-12.6" chest girth; Size X-Large: 14.2" neck girth / 19.7"-20.5" chest girth; Size XX-Large: 16.6" neck girth / 23.6"-24.4" chest girth    
+                </p>
+                <br>
+                <br>
+                <br>
+                <br>
+            <p class=navigation style="font-size: 1.7vw; line-height: 2vw">Customer Review (3)</p>
+            <br>
+            <br>
+            <div style="width: 100%; border-style: none none solid none; border-width: 1px"></div>
+            <br>
+            <br>
+            <strong class=smalltext style="font-family: raleway; font-size: 1.4vw; line-height: 2vw">Love the look!</strong>
+            <br>
+            <p class=smalltext style="color: rgb(180, 180, 180)">frank537&ensp;·&ensp;5 month ago</p>
+            <p class=smalltext>Great harness! The medium size of this brand fits better than medium of other brands as it is somewhat smaller. Our puppy has started to bite through the strap, so that could be more durable.</p>
+            <br>
+            <br>
+            <strong class=smalltext style="font-family: raleway; font-size: 1.4vw; line-height: 2vw">Very easy to put on</strong>
+            <br>
+            <p class=smalltext style="color: rgb(180, 180, 180)">frank537&ensp;·&ensp;5 month ago</p>
+            <p class=smalltext>Perfectly fits with my dog, and very easy to put on. Would recommend to everyone!</p>
+            <br>
+            <br>
+            <strong class=smalltext style="font-family: raleway; font-size: 1.4vw; line-height: 2vw">Very easy to put on</strong>
+            <br>
+            <p class=smalltext style="color: rgb(180, 180, 180)">frank537&ensp;·&ensp;5 month ago</p>
+            <p class=smalltext>Great harness! The medium size of this brand fits better than medium of other brands as it is somewhat smaller. Our puppy has started to bite through the strap, so that could be more durable.</p>
+            <br>
+            <br>
+            <br>
+            <br>
+            <p class=navigation style="font-size: 1.7vw; line-height: 2vw">You May Also Like</p>
+        </div>
+        <div id=adscontainer>
+            <div class=photobanner>
+                <img src="img/adsone.png" alt=""><img src="img/adstwo.png" alt=""><img src="img/adsthree.png" alt=""><img src="img/adsfour.png" alt=""><img src="img/adsfive.png" alt=""><img src="img/adssix.png" alt="">
+                <img src="img/adsone.png" alt=""><img src="img/adstwo.png" alt=""><img src="img/adsthree.png" alt=""><img src="img/adsfour.png" alt=""><img src="img/adsfive.png" alt=""><img src="img/adssix.png" alt="">
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div id=footer>
+            <div style="width: 100%; border-style: none none solid none; border-width: 1px"></div>
+            <br>
+            <p class="smalltext" style="text-align: center">
+            Pre-existing conditions are not covered. Waiting periods, annual deductible, co-insurance, benefit limits and exclusions may apply. Products, schedules, discounts, and rates may vary and are subject to change. More information available at checkout. Enroll at muddypaws.com/product/insurance.
+            <br>
+            <br>
+            ©2021 Muddy Paws Adventure Gears, Inc. All rights reserved
+            </p>
+        </div>
+
+        <div class=hamburger>
+            <div class=catalog>
+                <img class="icon menu" style="padding-left: 0vw; padding-top: 0vw" src="img/close.png" alt="close">
+                <p style="line-height: 2.6vw"><a href="product.html">
+                    <br>
+                    <br>
+                    Dog
+                    <br>
+                    &emsp;Harness
+                    <br>  
+                    &emsp;Food Storage
+                    <br>
+                    &emsp;Water Storage
+                    <br>
+                    &emsp;GPS Tracker
+                    <br>
+                    <br>
+                    Cat
+                    <br>
+                    &emsp;Harness
+                    <br>  
+                    &emsp;Food Storage
+                    <br>
+                    &emsp;Water Storage
+                    <br>
+                    &emsp;GPS Tracker
+                    <br>
+                    &emsp;Backpack
+                </a>
+                </p>
+            </div>
+        </div>
+        <script>
+            $(".menu").click(function(){
+                $(".hamburger").toggleClass("hamburger_open");
+            });
+        </script>
+    </body>
+</html>
