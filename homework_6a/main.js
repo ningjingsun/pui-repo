@@ -1,10 +1,13 @@
-const quantity = [];
+var quantity = [];
 
 $(".menu").click(function(){
     $(".hamburger").toggleClass("hamburger_open");
 });
 
 function addToCart(){
+    if(sessionStorage.getItem('quantity')){
+        quantity = JSON.parse(sessionStorage.getItem('quantity'));
+    }
     var selectedQuantity = document.getElementById("choosequantity").value;
     quantity.push(selectedQuantity);
     document.getElementById("updateCartNumber").innerHTML = "";
@@ -12,9 +15,6 @@ function addToCart(){
     for (element of quantity){
         totalQuantity += parseInt(element);
         // convert string to number. Otherwise + will only do string concatenation, since the values are string
-        console.log(element);
-        console.log(totalQuantity);
-        console.log(quantity);
     }
     if (totalQuantity > 0){
         $("#cartNumber").css("opacity", "1");
@@ -23,6 +23,7 @@ function addToCart(){
         $("#cartNumber").css("opacity", "0");
         console.log('0');
     }
+    sessionStorage.setItem('quantity', JSON.stringify(quantity));
 }
 
 function changeColor() {
