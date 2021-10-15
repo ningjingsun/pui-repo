@@ -4,6 +4,21 @@ $(".menu").click(function(){
     $(".hamburger").toggleClass("hamburger_open");
 });
 
+function checkOnload(){
+    let state = sessionStorage.getItem('quantity');
+    if(state){
+        quantity = JSON.parse(sessionStorage.getItem('quantity'));
+        let totalQuantity = 0;
+        for (element of quantity){
+            totalQuantity += parseInt(element);
+        }
+        $("#cartNumber").css("opacity", "1");
+        document.getElementById("updateCartNumber").innerHTML = totalQuantity;
+    } else {
+        $("#cartNumber").css("opacity", "0");
+    }
+};
+
 function addToCart(){
     if(sessionStorage.getItem('quantity')){
         quantity = JSON.parse(sessionStorage.getItem('quantity'));
@@ -21,7 +36,6 @@ function addToCart(){
         document.getElementById("updateCartNumber").innerHTML = totalQuantity;
     } else {
         $("#cartNumber").css("opacity", "0");
-        console.log('0');
     }
     sessionStorage.setItem('quantity', JSON.stringify(quantity));
 }
