@@ -1,9 +1,13 @@
 var quantity = [];
+var cart =[];
+const cartElement = document.getElementById("product_added");
+const templateElement = document.getElementById("product_template");
 
 $(".menu").click(function(){
     $(".hamburger").toggleClass("hamburger_open");
 });
 
+// refresh page to see the number at the icon on each page
 function checkOnload(){
     let state = sessionStorage.getItem('quantity');
     if(state){
@@ -19,6 +23,84 @@ function checkOnload(){
     }
 };
 
+
+
+
+
+
+$(".addintocart").click(function(){
+    var productName = document.getElementById("productName");
+    var productPrice = document.getElementById("productprice");
+    var choosesize = document.getElementById("choosesize");
+    var productSize = choosesize.options[choosesize.selectedIndex].value;
+    var choosecolor = document.getElementById("choosecolor");
+    var productColor = choosecolor.options[choosecolor.selectedIndex].value;
+    var productQuantity = document.getElementById("choosequantity").value;
+    updateCart(productName, productPrice, productSize, productColor, productQuantity)
+});
+
+// button onclick: push to the cart in sessionStorage
+function updateCart(productName, productPrice, productSize, productColor, productQuantity){
+    if(sessionStorage.getItem('cart')){
+        cart = JSON.parse(sessionStorage.getItem('cart'));
+    }
+    const product = {
+        name: productName,
+        price: productPrice,
+        size: productSize,
+        color: productColor,
+        quantity: productQuantity
+    }
+    cart.push(product);
+    sessionStorage.setItem('cart', JSON.stringify(cart));
+}
+
+// onload the cart page; see what items are in sessionStorage
+document.addEventListener('DOMContentLoaded', function() {
+    if(sessionStorage.getItem('cart')){
+        cart = JSON.parse(sessionStorage.getItem('cart'));
+    }
+    for (let cartkey of Object.keys(cart)){
+        var cartvalue = cart[cartkey];
+        console.log(cartkey, cartvalue);
+        addProductHTML(cartkey.name, cartkey.price, cartkey.size, cartkey.color, cartkey.quantity)
+    }
+}, false);
+
+function addProductHTML(productName, productPrice, productSize, productColor, productQuantity){
+    const productElement = templateElement.cloneNode(true);
+    productElement.id = "";
+
+    const imageElement = productElement.getElementsByClassName("product_img")[0];
+    imageElement.setAttribute('src', 'img/' + productColor + '.png');
+
+    const nameElement = productElement.getElementsByClassName("product_name")[0];
+    nameElement.innerHTML = productName;
+
+    const priceElement = productElement.getElementsByClassName("product_price")[0];
+    priceElement.innerHTML = '$' + productPrice.toFixed(2);
+
+    const sizeElement = productElement.getElementsByClassName("product_size")[0];
+    sizeElement.innerHTML = 'Size:' + productSize;
+
+    const colorElement = productElement.getElementsByClassName("product_color")[0];
+    colorElement.innerHTML = 'Color:' + productColor;
+
+    const quantityElement = productElement.getElementsByClassName("productquantity")[0];
+    quantity.Element.value = productQuantity;
+
+    cartElement.appendChild(productElement);
+}
+
+
+
+
+
+
+
+
+
+// update the number at the icon
 function addToCart(){
     if(sessionStorage.getItem('quantity')){
         quantity = JSON.parse(sessionStorage.getItem('quantity'));
