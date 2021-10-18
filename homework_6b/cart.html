@@ -25,7 +25,7 @@
 
         <div id=cart_content>
             <div id=product_added>
-                <p class=navigation style="font-size: 1.7vw">Your Cart <span id=quantity>(0)</span></p>
+                <p class=navigation style="font-size: 1.7vw">Your Cart (<span id=quantityCount>0</span>)</p>
                 <br>
                 <div style="width: 100%; border-style: none none solid none; border-width: 1px"></div>
                 <br>
@@ -44,7 +44,7 @@
                         <!-- <p class="smalltext btn-remove-item" style="color: red">Cancel</p> -->
                     </div>
                     <!-- <button class="btn-remove-item">X</button> -->
-                    <img class="icon btn-remove-item" src="img/close.png" alt="close">
+                    <img class="icon" id="btn-remove-item" onclick="removeItem(this.parentNode)" src="img/close.png" alt="close">
                 </div>
                 
             </div>
@@ -61,9 +61,9 @@
                         <p style="line-height: 2.4vw" class=smalltext>Total before Tax:</p>
                     </div>
                     <div id=price_digit>
-                        <p id="subtotal" style="text-align: right; line-height: 2.4vw" class=smalltext>$0.0</p>
-                        <p id="shipping" style="text-align: right; line-height: 2.4vw" class=smalltext>$0.0</p>
-                        <p id="total" style="text-align: right; line-height: 2.4vw" class=smalltext>$0.0</p>
+                        <p id="subtotal" style="text-align: right; line-height: 2.4vw" class=smalltext>$0.00</p>
+                        <p id="shipping" style="text-align: right; line-height: 2.4vw" class=smalltext>$12.00</p>
+                        <p id="total" style="text-align: right; line-height: 2.4vw" class=smalltext>$0.00</p>
                     </div>
                 </div>
                 <input type="button" id="checkout" onclick="alert('Direct to Payment')" value="Proceed to Checkout">
