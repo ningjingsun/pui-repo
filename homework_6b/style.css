@@ -399,3 +399,7 @@ input[type='number']{
 #product_template{
     display: none;
 }
+
+#btn-remove-item:hover{
+    cursor: pointer;
+}
