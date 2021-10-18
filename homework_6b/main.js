@@ -73,20 +73,11 @@ function updateCart(productName, productPrice, productSize, productColor, produc
     sessionStorage.setItem('cart', JSON.stringify(cart));
 }
 
-
-
-
-
-
-
-
-
 // onload the cart page; see what items are in sessionStorage
 function loadCart(){
     if(sessionStorage.getItem('cart')){
         cart = JSON.parse(sessionStorage.getItem('cart'));
     }
-    console.log("load");
     console.log(cart);
     for (element of cart) {
         console.log(element);
@@ -110,13 +101,13 @@ function addProductHTML(productName, productPrice, productSize, productColor, pr
     const priceElement = productElement.getElementsByClassName("product_price")[0];
     priceElement.innerHTML = productPrice;
 
-    const sizeElement = productElement.getElementsByClassName("product_size");
-    sizeElement.innerHTML = 'Size:' + productSize;
+    const sizeElement = productElement.getElementsByClassName("product_size")[0];
+    sizeElement.innerHTML = '&ensp;Size: ' + productSize;
 
-    const colorElement = productElement.getElementsByClassName("product_color");
-    colorElement.innerHTML = 'Color:' + productColor;
+    const colorElement = productElement.getElementsByClassName("product_color")[0];
+    colorElement.innerHTML = 'Color: ' + productColor + ';';
 
-    const quantityElement = productElement.getElementsByClassName("productquantity");
+    const quantityElement = productElement.getElementsByClassName("productquantity")[0];
     quantityElement.value = productQuantity;
 
     cartElement.appendChild(productElement);
