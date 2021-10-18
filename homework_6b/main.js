@@ -18,6 +18,10 @@ function checkOnload(){
         }
         $("#cartNumber").css("opacity", "1");
         document.getElementById("updateCartNumber").innerHTML = totalQuantity;
+        // console.log(quantity);
+        if (quantity.length == 0){
+            $("#cartNumber").css("opacity", "0");
+        }
     } else {
         $("#cartNumber").css("opacity", "0");
     }
@@ -169,13 +173,28 @@ function removeItem(item){
     sessionStorage.setItem('cart', JSON.stringify(cart));
     calculateTotal();
     updateQuantity();
+
+    if(sessionStorage.getItem('quantity')){
+        quantity = JSON.parse(sessionStorage.getItem('quantity'));
+    }
+    console.log(quantity);
+    quantity.pop();
+    console.log(quantity);
+    sessionStorage.setItem('quantity', JSON.stringify(quantity));
+
+    let totalQuantity = 0;
+    for (element of quantity){
+        totalQuantity += parseInt(element);
+    }
+    document.getElementById("updateCartNumber").innerHTML = totalQuantity;
+
+    if (totalQuantity > 0){
+        $("#cartNumber").css("opacity", "1");
+        document.getElementById("updateCartNumber").innerHTML = totalQuantity;
+    } else {
+        $("#cartNumber").css("opacity", "0");
+    }
 }
-
-
-
-
-
-
 
 function changeColor() {
     var choosecolor = document.getElementById("choosecolor");
