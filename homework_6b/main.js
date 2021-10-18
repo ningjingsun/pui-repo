@@ -82,6 +82,9 @@ function loadCart(){
     for (element of cart) {
         console.log(element);
         addProductHTML(element.name, element.price, element.size, element.color, element.quantity)
+    
+        calculateTotal();
+        updateQuantity();
     }
 }
 
@@ -113,7 +116,38 @@ function addProductHTML(productName, productPrice, productSize, productColor, pr
     cartElement.appendChild(productElement);
 }
 
+function calculateTotal(){
+    if(sessionStorage.getItem('cart')){
+        cart = JSON.parse(sessionStorage.getItem('cart'));
+    }
+    var totalSubPrice = 0;
+    for (element of cart){
+        totalSubPrice += parseFloat(element.price.slice(1));
+        console.log(element.price);
+        // convert string to number. Otherwise + will only do string concatenation, since the values are string
+    }
 
+    const subTotalPrice = document.getElementById("subtotal");
+    const totalPrice = document.getElementById("total");
+    subTotalPrice.innerHTML = "$" + totalSubPrice;
+    totalPrice.innerHTML = "$" + (totalSubPrice + 12);
+}
+
+function updateQuantity(){
+    if(sessionStorage.getItem('cart')){
+        cart = JSON.parse(sessionStorage.getItem('cart'));
+    }
+    let quantityCount = 0;
+    for (element of cart){
+        quantityCount += parseInt(element.quantity);
+    }
+    const updateQuantityCount = document.getElementById("quantityCount");
+    updateQuantityCount.innerHTML = quantityCount;
+}
+
+function removeItem(item){
+    item.parentNode.removeChild(item);
+}
 
 
 
