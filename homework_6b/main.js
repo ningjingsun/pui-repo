@@ -65,6 +65,9 @@ function updateCart(productName, productPrice, productSize, productColor, produc
         color: productColor,
         quantity: productQuantity
     }
+    if(sessionStorage.getItem('cart')){
+        cart = JSON.parse(sessionStorage.getItem('cart'));
+    }
     cart.push(product);
     // console.log(cart);
     sessionStorage.setItem('cart', JSON.stringify(cart));
@@ -80,33 +83,32 @@ function updateCart(productName, productPrice, productSize, productColor, produc
 
 // onload the cart page; see what items are in sessionStorage
 function loadCart(){
-    // if(sessionStorage.getItem('cart')){
-    //     cart = JSON.parse(sessionStorage.getItem('cart'));
-    // }
-    cart = JSON.parse(sessionStorage.getItem('cart'));
+    if(sessionStorage.getItem('cart')){
+        cart = JSON.parse(sessionStorage.getItem('cart'));
+    }
     console.log("load");
     console.log(cart);
-    console.log(templateElement);
-    // for (let cartkey of Object.keys(cart)){
-    for (var cartkey in cart){
-        console.log(cartkey, cart[cartkey]);
-        var cartvalue = cart[cartkey];
-        addProductHTML(cartkey.name, cartkey.price, cartkey.size, cartkey.color, cartkey.quantity)
+    for (element of cart) {
+        console.log(element);
+        addProductHTML(element.name, element.price, element.size, element.color, element.quantity)
     }
 }
 
 function addProductHTML(productName, productPrice, productSize, productColor, productQuantity){
+    const templateElement = document.getElementById("product_template");
+    const cartElement = document.getElementById("product_added");
+
     const productElement = templateElement.cloneNode(true);
     productElement.id = "";
 
-    const imageElement = productElement.getElementsByClassName("product_img");
+    const imageElement = productElement.getElementsByClassName("product_img")[0];
     imageElement.setAttribute('src', 'img/' + productColor + '.png');
 
-    const nameElement = productElement.getElementById("product_name");
+    const nameElement = productElement.getElementsByClassName("product_name")[0];
     nameElement.innerHTML = productName;
 
-    const priceElement = productElement.getElementById("product_price");
-    priceElement.innerHTML = '$' + productPrice.toFixed(2);
+    const priceElement = productElement.getElementsByClassName("product_price")[0];
+    priceElement.innerHTML = productPrice;
 
     const sizeElement = productElement.getElementsByClassName("product_size");
     sizeElement.innerHTML = 'Size:' + productSize;
@@ -115,7 +117,7 @@ function addProductHTML(productName, productPrice, productSize, productColor, pr
     colorElement.innerHTML = 'Color:' + productColor;
 
     const quantityElement = productElement.getElementsByClassName("productquantity");
-    quantity.Element.value = productQuantity;
+    quantityElement.value = productQuantity;
 
     cartElement.appendChild(productElement);
 }
