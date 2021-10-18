@@ -350,7 +350,7 @@ input[type=number]{
     cursor: pointer;
 }
 
-#product_template{
+.cart_item{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
