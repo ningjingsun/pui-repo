@@ -123,10 +123,8 @@ function calculateTotal(){
     var totalSubPrice = 0;
     for (element of cart){
         totalSubPrice += parseFloat(element.price.slice(1));
-        console.log(element.price);
         // convert string to number. Otherwise + will only do string concatenation, since the values are string
     }
-
     const subTotalPrice = document.getElementById("subtotal");
     const totalPrice = document.getElementById("total");
     subTotalPrice.innerHTML = "$" + totalSubPrice;
@@ -147,6 +145,30 @@ function updateQuantity(){
 
 function removeItem(item){
     item.parentNode.removeChild(item);
+    if(sessionStorage.getItem('cart')){
+        cart = JSON.parse(sessionStorage.getItem('cart'));
+    }
+    removeColor = item.querySelector('.product_color').innerHTML.split(" ").join("").slice(6, -1);
+    removeSize = item.querySelector('.product_size').innerHTML.slice(7);
+    // console.log(removeColor);
+    // console.log(removeSize);
+    for (element of cart){
+        console.log(element.color);
+        console.log(element.size);
+        if (removeColor == element.color && removeSize == element.size){
+            // console.log(element);
+            const itemIndex = cart.indexOf(element);
+            // console.log(itemIndex);
+            cart.splice(itemIndex, 1);
+            // remove this current element from the cart javascript array
+            // element.remove();
+            break;
+        }
+    }
+    console.log(cart);
+    sessionStorage.setItem('cart', JSON.stringify(cart));
+    calculateTotal();
+    updateQuantity();
 }
 
 
