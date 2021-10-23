@@ -126,13 +126,18 @@ function calculateTotal(){
     }
     var totalSubPrice = 0;
     for (element of cart){
-        totalSubPrice += parseFloat(element.price.slice(1));
+        totalSubPrice += parseFloat(element.price.slice(1) * element.quantity);
         // convert string to number. Otherwise + will only do string concatenation, since the values are string
     }
     const subTotalPrice = document.getElementById("subtotal");
     const totalPrice = document.getElementById("total");
+    totalSubPrice = totalSubPrice.toFixed(2);
     subTotalPrice.innerHTML = "$" + totalSubPrice;
-    totalPrice.innerHTML = "$" + (totalSubPrice + 12);
+    const shipping = 12;
+    totalPriceNumber = totalSubPrice + shipping;
+    totalPriceNumber = Number(totalPriceNumber).toFixed(2);
+    console.log(totalPriceNumber);
+    totalPrice.innerHTML = "$" + totalPriceNumber;
 }
 
 function updateQuantity(){
