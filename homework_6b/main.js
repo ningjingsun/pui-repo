@@ -134,7 +134,8 @@ function calculateTotal(){
     totalSubPrice = totalSubPrice.toFixed(2);
     subTotalPrice.innerHTML = "$" + totalSubPrice;
     const shipping = 12;
-    totalPriceNumber = totalSubPrice + shipping;
+    totalPriceNumber = Number(totalSubPrice) + Number(shipping);
+    console.log(totalPriceNumber);
     totalPriceNumber = Number(totalPriceNumber).toFixed(2);
     console.log(totalPriceNumber);
     totalPrice.innerHTML = "$" + totalPriceNumber;
