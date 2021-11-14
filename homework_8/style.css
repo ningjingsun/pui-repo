@@ -3,38 +3,48 @@
     padding: 0;
 }
 @font-face {
-    font-family: aspira;
-    font-style: normal;
-    src: url(fonts/aspira_regular.otf);
-}
-@font-face {
-    font-family: aspira;
-    font-style: medium;
-    src: url(fonts/aspira_medium.otf);
-}
-@font-face {
-    font-family: aspira;
-    font-style: demi;
-    src: url(fonts/aspira_demi.otf);
-}
-@font-face {
-    font-family: aspira;
-    font-style: bold;
-    src: url(fonts/aspira_bold.otf);
-}
-@font-face {
-    font-family: aspira;
+    font-family: 'aspira_heavy';
     font-style: heavy;
     src: url(fonts/aspira_heavy.otf);
 }
 @font-face {
-    font-family: aspira;
+    font-family: 'aspira_black';
     font-style: blackfont;
     src: url(fonts/aspira_black.otf);
 }
+@font-face {
+    font-family: 'aspira_normal';
+    font-style: normal;
+    src: url(fonts/aspira_regular.otf);
+}
+@font-face {
+    font-family: 'aspira_bold';
+    font-style: bold;
+    src: url(fonts/aspira_bold.otf);
+}
 
+body{
+    margin: 3vw;
+    margin-top: 1.4vw;
+}
+#header{
+    position:absolute;
+    top: 3vw;
+    right: 3vw;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 4vw;
+}
 .logo{
-    font-family: aspira;
-    font-style: medium;
-    font-size: 1.8vw; 
+    font-family: 'aspira_bold';
+    font-style: bold;
+    color: rgb(50, 50, 50);
+    font-size: 3.6vw; 
+}
+p{
+    font-family: 'aspira_normal';
+    font-style: normal;
+    color: rgb(50, 50, 50);
+    font-size: 1.4vw;
 }
