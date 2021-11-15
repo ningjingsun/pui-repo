@@ -11,18 +11,19 @@
 
     <body>
         <div id=content>
-            <div id=logo>
-                <p class=logo>AI can do...</p>
-            </div>
             <div id=header>
-                <div><p>Capability</p></div>
-                <div><p>Industry</p></div>
-                <div><p>Data Type</p></div>
-                <div><p>?</p></div>
+                <div id=logo>
+                    <p class=logo>AI can do...</p>
+                    <br>
+                    <br>
+                </div>
+                <div id=navigation>
+                    <div><p>Capability</p></div>
+                    <div><p style="opacity: 0.3">Industry</p></div>
+                    <div><p style="opacity: 0.3">Data Type</p></div>
+                    <div><p>?</p></div>
+                </div>
             </div>
-            <br>
-            <br>
-            <br>
             <div id=card_content>
                 <div id=filter>
                     <input type="checkbox" name="capability" id="capability" value="All capabilities" onclick="capabilitytoggle(this); filter_capability()" checked>
@@ -34,7 +35,7 @@
                     <input type="checkbox" name="capability" id="compose" value="compose" onclick="filter_compose()" checked>
                     <label class=tag for="compose">&emsp;Compose (10)</label>
                     <br>
-                    <input type="checkbox" name="capability" id="detect" value="detect" checked>
+                    <input type="checkbox" name="capability" id="detect" value="detect" onclick="filter_detect()" checked>
                     <label class=tag for="detect">&emsp;Detect (26)</label>
                     <br>
                     <input type="checkbox" name="capability" id="discover" value="discover" checked>
@@ -101,8 +102,8 @@
                     <br>
                     <br>
                     <br>
-                    <input type="checkbox" name="data type" id="data type" value="All data types" onclick="datatypetoggle(this); filter_datatype()" checked>
-                    <label class=tag for="data type" style="font-family: 'aspira_heavy'">&emsp;All data types</label>
+                    <input type="checkbox" name="datatype" id="datatype" value="All data types" onclick="datatypetoggle(this); filter_datatype()" checked>
+                    <label class=tag for="datatype" style="font-family: 'aspira_heavy'">&emsp;All data types</label>
                     <br>
                     <input type="checkbox" name="datatype" id="audio" value="audio" checked>
                     <label class=tag for="audio">&emsp;Audio</label>
@@ -118,6 +119,12 @@
                     <br>
                     <input type="checkbox" name="datatype" id="video" value="video" checked>
                     <label class=tag for="video">&emsp;Video</label>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
                 </div>
 
                 <div id=card>
@@ -135,19 +142,32 @@
                                 <div class=tag0><p class="tag tag2">HR Chatbot</p></div>
                             </div>
                             <div class="card_img">
-                                <img class="card_icon" src="img/hrchatbot1.png" alt="hrchatbot">
+                                <img class="card_icon" src="img/hrchatbot1.png" alt="hr chatbot">
                             </div>
                         </div>
+
+                        <div class="card compare_card card_hide compare_cards">
+                            <div class="card_title compare_card_title">
+                                <p class=card_title_p>Compare</p>
+                            </div>
+                            <div class="card_text">
+                                <p class="compare_card_text">features to accepted user settings</p>
+                            </div>
+                            <div class="card_tag">
+                                <div class=tag0><p class="tag tag1">Risk Mitigation & Security</p></div>
+                                <div class=tag0><p class="tag tag2">Biometric Security</p></div>
+                            </div>
+                            <div class="card_img">
+                                <img class="card_icon" src="img/biometric_security.png" alt="biometric security">
+                            </div>
+                        </div>
+
                         <div class="card compare_card card_hide compare_cards">
                             <div class="card_title compare_card_title">
                                 <p class=card_title_p>Compare</p>
                             </div>
                         </div>
-                        <div class="card compare_card card_hide compare_cards">
-                            <div class="card_title compare_card_title">
-                                <p class=card_title_p>Compare</p>
-                            </div>
-                        </div>
+
                         <div class="card compare_card card_hide compare_cards">
                             <div class="card_title compare_card_title">
                                 <p class=card_title_p>Compare</p>
@@ -182,6 +202,9 @@
                             </div>
                         </div>
                     </div>
+
+                    <br>
+                    <br>
                 </div>
             </div>
         </div>
@@ -270,6 +293,23 @@
                 var checkBox = document.getElementById('compose');
                 var cardBox = document.getElementById('compose_cardbox');
                 var cards = document.getElementsByClassName('compose_card');
+                console.log(cards);
+                if (checkBox.checked == true){
+                    for(var i=0, n=cards.length; i<n; i++){
+                        cards[i].style.display = 'block';
+                    }
+                    cardBox.style.display = 'flex';
+                } else {
+                    for(var i=0, n=cards.length; i<n; i++){
+                        cards[i].style.display = 'none';
+                    }
+                    cardBox.style.display = 'none';
+                }
+            }
+            function filter_detect(){
+                var checkBox = document.getElementById('detect');
+                var cardBox = document.getElementById('detect_cardbox');
+                var cards = document.getElementsByClassName('detect_card');
                 console.log(cards);
                 if (checkBox.checked == true){
                     for(var i=0, n=cards.length; i<n; i++){
