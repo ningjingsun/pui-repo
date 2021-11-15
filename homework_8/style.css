@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
 }
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+}
 @font-face {
     font-family: 'aspira_heavy';
     font-style: heavy;
@@ -30,30 +33,104 @@
 
 body{
     margin: 4vw;
-    margin-top: 2vw;
+    margin-top: 0vw;
+    height: 100%; 
+    overflow: hidden;
 }
 #header{
-    position:absolute;
-    top: 2.5vw;
-    right: 4vw;
+    padding-top: 2vw;
+    /* border: 1px; */
+    position: fixed;
+    /* border-style: none none solid none; */
+    display: flex;
+    justify-content: space-between;
+    width: 92%;
+    background-color: white;
+    z-index: 100;
+    height: 13vh;
+    border-color: rgba(0, 0, 0, 0.4);
+    /* background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.1)); */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 80%, rgba(255, 255, 255, 0));
+}
+#navigation{
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
     gap: 4vw;
+    padding-top: 1vw;
+}
+#card_content{
+    display: flex;
+    max-width: 100%;
+    gap: 1vw;
+    flex-direction: row;
+    /* position: relative; */
+    /* z-index: 0; */
+    height: 100vh;
+    overflow: hidden;
+}
+#filter{
+    /* border: 1px;
+    border-style: none solid none none;
+    border-color: rgba(0, 0, 0, 0.4); */
+    float: left;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding-top: 16vh;
+    padding-left: 0.5vw;
+    padding-right: 1vw;
+    width: 18%;
+}
+#card{
+    float: left;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding-top: 16vh;
+    padding-left: 3vw;
+    padding-right: 1.1vw;
+    width: 82%;
+}
+input[type=checkbox]:checked{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 2px;
+    background-color: white;
+    border-style: solid;
+    background-image: url(img/checked.png);
+    background-size: 13px;
+    position: relative;
+    background-position: right top;
+    background-repeat: no-repeat;
+    border: 1px;
+    width: 15px;
+    height: 15px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.4);
+}
+input[type=checkbox]{
+    background-color: white;
+    border-radius: 2px;
+    border-style: solid;
+    border: 1px;
+    width: 15px;
+    height: 15px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.4);
 }
 .logo{
     font-family: 'aspira_bold';
     font-style: bold;
     color: rgb(50, 50, 50);
     font-size: 3.4vw; 
-    line-height: 4vw;
+    line-height: 3.4vw;
 }
 p{
     font-family: 'aspira_normal';
     font-style: normal;
     color: rgb(50, 50, 50);
-    font-size: 1.4vw;
-    line-height: 2.4vw;
+    font-size: 1.3vw;
+    line-height: 2vw;
 }
 .tag{
     font-family: 'aspira_normal';
@@ -69,12 +146,6 @@ p{
     font-size: 1.8vw;
     line-height: 2.4vw;
 }
-#card_content{
-    display: flex;
-    max-width: 100%;
-    gap: 3.6vw;
-    flex-direction: row;
-}
 @media (max-width: 800px) {
     /* responsive flexbox */
     #card_content {
@@ -82,18 +153,12 @@ p{
     }
     /* responsive font size */
 }
-#filter{
-    width: 20%;
-}
-#card{
-    width: 80%;
-}
 .cardbox{
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-content: flex-start;
-    gap: 2.1vw;
+    gap: 2vw;
     margin-top: 2vw;
     margin-bottom: 3vw;
 }
@@ -109,15 +174,15 @@ p{
 }
 .compare_cards{
     border: solid rgb(255, 79, 35);
-    border-width: 1px;
+    border-width: 1.3px;
 }
 .compose_cards{
     border: solid rgb(28, 205, 245);
-    border-width: 1px;
+    border-width: 1.3px;
 }
 .detect_cards{
     border: solid rgb(255, 200, 20);
-    border-width: 1px;
+    border-width: 1.3px;
 }
 .card:hover{
     transform: translate(-10px, -10px);
@@ -170,9 +235,9 @@ p{
     width: auto;
     font-size: 0.8vw;
     background-color: white;
-    opacity: 0.8;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(5px); 
+    opacity: 0.6;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px); 
     z-index: 20;
 }
 .tag2{
@@ -187,9 +252,9 @@ p{
     width: auto;
     font-size: 0.8vw;
     background-color: white;
-    opacity: 0.8;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(5px); 
+    opacity: 0.6;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px); 
     z-index: 20;
 }
 .card_img{
