@@ -40,7 +40,7 @@ body{
     font-family: 'aspira_bold';
     font-style: bold;
     color: rgb(50, 50, 50);
-    font-size: 3.6vw; 
+    font-size: 3.4vw; 
     line-height: 4.4vw;
 }
 p{
@@ -54,14 +54,14 @@ p{
     font-family: 'aspira_normal';
     font-style: normal;
     color: rgb(50, 50, 50);
-    font-size: 1.2vw;
-    line-height: 1.8vw;
+    font-size: 1vw;
+    line-height: 2vw;
 }
 .title{
     font-family: 'aspira_heavy';
     font-style: heavy;
     color: rgb(50, 50, 50);
-    font-size: 1.8vw;
+    font-size: 2vw;
     line-height: 2.4vw;
 }
 #card_content{
