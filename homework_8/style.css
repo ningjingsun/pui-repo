@@ -22,6 +22,11 @@
     font-style: bold;
     src: url(fonts/aspira_bold.otf);
 }
+@font-face {
+    font-family: 'aspira_light';
+    font-style: light;
+    src: url(fonts/aspira_light.otf);
+}
 
 body{
     margin: 4vw;
@@ -41,7 +46,7 @@ body{
     font-style: bold;
     color: rgb(50, 50, 50);
     font-size: 3.4vw; 
-    line-height: 4.4vw;
+    line-height: 4vw;
 }
 p{
     font-family: 'aspira_normal';
@@ -54,14 +59,14 @@ p{
     font-family: 'aspira_normal';
     font-style: normal;
     color: rgb(50, 50, 50);
-    font-size: 1vw;
+    font-size: 0.9vw;
     line-height: 2vw;
 }
 .title{
     font-family: 'aspira_heavy';
     font-style: heavy;
     color: rgb(50, 50, 50);
-    font-size: 2vw;
+    font-size: 1.8vw;
     line-height: 2.4vw;
 }
 #card_content{
@@ -78,39 +83,121 @@ p{
     /* responsive font size */
 }
 #filter{
-    width: 25%;
+    width: 20%;
 }
 #card{
-    width: 75%;
+    width: 80%;
 }
 .cardbox{
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-content: flex-start;
-    gap: 3vw;
+    gap: 2.1vw;
     margin-top: 2vw;
     margin-bottom: 3vw;
 }
 .card{
-    width: 15vw;
+    width: 14vw;
     height: 17vw;
     background-color: white;
     border-radius: 1.2vw;
-    border: solid rgb(255, 79, 35);
-    border-width: 1px;
     /* box-shadow: h-offset v-offset blur spread color |inset|initial|inherit; */
     box-shadow: 0px 4px 24px 2px rgba(0, 0, 0, 0.1);
-    padding: 1.2vw;
+    padding: 1vw;
+    position: relative;
+}
+.compare_cards{
+    border: solid rgb(255, 79, 35);
+    border-width: 1px;
+}
+.compose_cards{
+    border: solid rgb(28, 205, 245);
+    border-width: 1px;
+}
+.detect_cards{
+    border: solid rgb(255, 200, 20);
+    border-width: 1px;
+}
+.card:hover{
+    transform: translate(-10px, -10px);
+    transition-timing-function: ease-in;
+    transition-duration: 0.1s;
 }
 .card_title{
     border-radius: 2vw;
     background-color: rgb(255, 79, 35);
-    padding: 0.4vw;
+    padding: 0.3vw;
     padding-left: 1.2vw;
+}
+.compare_card_title{
+    background-color: rgb(255, 79, 35);
+}
+.compose_card_title{
+    background-color: rgb(28, 205, 245);
+}
+.detect_card_title{
+    background-color: rgb(255, 200, 20);
 }
 .card_title_p{
     color: white;
     font-family: 'aspira_heavy';
     font-style: heavy;
+}
+.card_text{
+    padding-left: 1vw;
+    padding-top: 1vw;
+    height: 38%;
+}
+.compare_card_text{
+    color: rgba(255, 79, 35, 0.9);
+    font-size: 1.4vw;
+    line-height: 2vw;
+    font-family: "aspira_light";
+}
+.tag0{
+    margin-top: 1.1vw;
+}
+.tag1{
+    position: relative;
+    display: inline;
+    border: solid rgb(178, 183, 190);
+    border-width: 1px;
+    border-radius: 2vw;
+    padding: 0.8vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    width: auto;
+    font-size: 0.8vw;
+    background-color: white;
+    opacity: 0.8;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px); 
+    z-index: 20;
+}
+.tag2{
+    position: relative;
+    display: inline;
+    border: solid rgb(178, 183, 190);
+    border-width: 1px;
+    border-radius: 2vw;
+    padding: 0.8vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    width: auto;
+    font-size: 0.8vw;
+    background-color: white;
+    opacity: 0.8;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px); 
+    z-index: 20;
+}
+.card_img{
+    position: absolute;
+    top: 9vw;
+    right: 1vw;
+}
+.card_icon{
+    width: 8vw;
+    opacity: 0.07;
 }
