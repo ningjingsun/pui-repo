@@ -25,122 +25,140 @@
             <br>
             <div id=card_content>
                 <div id=filter>
-                    <input type="checkbox" name="capability" value="All capabilities" onclick="capabilitytoggle(this)">
+                    <input type="checkbox" name="capability" id="capability" value="All capabilities" onclick="capabilitytoggle(this); filter_capability()" checked>
                     <label class=tag for="capability" style="font-family: 'aspira_heavy'">&emsp;All capabilities</label>
                     <br>
-                    <input type="checkbox" name="capability" id="compose" value="compose">
-                    <label class=tag for="compose">&emsp;Compose (10)</label>
-                    <br>
-                    <input type="checkbox" name="capability" id="compare" value="compare">
+                    <input type="checkbox" name="capability" id="compare" value="compare" onclick="filter_compare()" checked>
                     <label class=tag for="compare">&emsp;Compare (17)</label>
                     <br>
-                    <input type="checkbox" name="capability" id="detect" value="detect">
+                    <input type="checkbox" name="capability" id="compose" value="compose" onclick="filter_compose()" checked>
+                    <label class=tag for="compose">&emsp;Compose (10)</label>
+                    <br>
+                    <input type="checkbox" name="capability" id="detect" value="detect" checked>
                     <label class=tag for="detect">&emsp;Detect (26)</label>
                     <br>
-                    <input type="checkbox" name="capability" id="discover" value="discover">
+                    <input type="checkbox" name="capability" id="discover" value="discover" checked>
                     <label class=tag for="discover">&emsp;Discover (5)</label>
                     <br>
-                    <input type="checkbox" name="capability" id="estimate" value="estimate">
+                    <input type="checkbox" name="capability" id="estimate" value="estimate" checked>
                     <label class=tag for="estimate">&emsp;Estimate (17)</label>
                     <br>
-                    <input type="checkbox" name="capability" id="forecast" value="forecast">
+                    <input type="checkbox" name="capability" id="forecast" value="forecast" checked>
                     <label class=tag for="forecast">&emsp;Forecast (9)</label>
                     <br>
-                    <input type="checkbox" name="capability" id="identify" value="identify">
+                    <input type="checkbox" name="capability" id="identify" value="identify" checked>
                     <label class=tag for="identify">&emsp;Identify (44)</label>
                     <br>
-                    <input type="checkbox" name="capability" id="monitor" value="monitor">
+                    <input type="checkbox" name="capability" id="monitor" value="monitor" checked>
                     <label class=tag for="monitor">&emsp;Monitor (2)</label>
                     <br>
-                    <input type="checkbox" name="capability" id="predict" value="predict">
+                    <input type="checkbox" name="capability" id="predict" value="predict" checked>
                     <label class=tag for="predict">&emsp;Predict (7)</label>
                     <br>
-                    <input type="checkbox" name="capability" id="rate" value="rate">
+                    <input type="checkbox" name="capability" id="rate" value="rate" checked>
                     <label class=tag for="rate">&emsp;Rate (2)</label>
                     <br>
                     <br>
                     <br>
-                    <input type="checkbox" name="industry" id="industry" value="All industries" onclick="industrytoggle(this)">
+                    <input type="checkbox" name="industry" id="industry" value="All industries" onclick="industrytoggle(this)" checked>
                     <label class=tag for="industry" style="font-family: 'aspira_heavy'">&emsp;All industries</label>
                     <br>
-                    <input type="checkbox" name="industry" id="commerce" value="commerce & sales">
+                    <input type="checkbox" name="industry" id="commerce" value="commerce & sales" checked>
                     <label class=tag for="commerce">&emsp;Commerce & Sales (8)</label>
                     <br>
-                    <input type="checkbox" name="industry" id="education" value="education">
+                    <input type="checkbox" name="industry" id="education" value="education" checked>
                     <label class=tag for="education">&emsp;Education (13)</label>
                     <br>
-                    <input type="checkbox" name="industry" id="finance" value="finance">
+                    <input type="checkbox" name="industry" id="finance" value="finance" checked>
                     <label class=tag for="finance">&emsp;Finance (9)</label>
                     <br>
-                    <input type="checkbox" name="industry" id="healthcare" value="healthcare">
+                    <input type="checkbox" name="industry" id="healthcare" value="healthcare" checked>
                     <label class=tag for="healthcare">&emsp;Healthcare (18)</label>
                     <br>
-                    <input type="checkbox" name="industry" id="hospitality" value="hospitality">
+                    <input type="checkbox" name="industry" id="hospitality" value="hospitality" checked>
                     <label class=tag for="hospitality">&emsp;Hospitality (10)</label>
                     <br>
-                    <input type="checkbox" name="industry" id="infrastructure" value="infrastructure">
+                    <input type="checkbox" name="industry" id="infrastructure" value="infrastructure" checked>
                     <label class=tag for="infrastructure">&emsp;Infrastructure & Utilities (4)</label>
                     <br>
-                    <input type="checkbox" name="industry" id="leisure" value="leisure">
+                    <input type="checkbox" name="industry" id="leisure" value="leisure" checked>
                     <label class=tag for="leisure">&emsp;Leisure, Content & Media (18)</label>
                     <br>
-                    <input type="checkbox" name="industry" id="manufacturing" value="manufacturing">
+                    <input type="checkbox" name="industry" id="manufacturing" value="manufacturing" checked>
                     <label class=tag for="manufacturing">&emsp;Manufacturing, Production & Agriculture (16)</label>
                     <br>
-                    <input type="checkbox" name="industry" id="office" value="office">
+                    <input type="checkbox" name="industry" id="office" value="office" checked>
                     <label class=tag for="office">&emsp;Office Productivity & Business Workflow (3)</label>
                     <br>
-                    <input type="checkbox" name="industry" id="professional" value="professional">
+                    <input type="checkbox" name="industry" id="professional" value="professional" checked>
                     <label class=tag for="professional">&emsp;Professional Services (16)</label>
                     <br>
-                    <input type="checkbox" name="industry" id="risk" value="risk">
+                    <input type="checkbox" name="industry" id="risk" value="risk" checked>
                     <label class=tag for="risk">&emsp;Risk Mitigation & Security (13)</label>
                     <br>
-                    <input type="checkbox" name="industry" id="transportation" value="transportation">
+                    <input type="checkbox" name="industry" id="transportation" value="transportation" checked>
                     <label class=tag for="transportation">&emsp;Transportation (16)</label>
                     <br>
                     <br>
                     <br>
-                    <input type="checkbox" name="data type" id="data type" value="All data types" onclick="datatypetoggle(this)">
+                    <input type="checkbox" name="data type" id="data type" value="All data types" onclick="datatypetoggle(this)" checked>
                     <label class=tag for="data type" style="font-family: 'aspira_heavy'">&emsp;All data types</label>
                     <br>
-                    <input type="checkbox" name="datatype" id="audio" value="audio">
+                    <input type="checkbox" name="datatype" id="audio" value="audio" checked>
                     <label class=tag for="audio">&emsp;Audio</label>
                     <br>
-                    <input type="checkbox" name="datatype" id="image" value="image">
+                    <input type="checkbox" name="datatype" id="image" value="image" checked>
                     <label class=tag for="image">&emsp;Image</label>
                     <br>
-                    <input type="checkbox" name="datatype" id="tabular" value="tabular">
+                    <input type="checkbox" name="datatype" id="tabular" value="tabular" checked>
                     <label class=tag for="tabular">&emsp;Tabular</label>
                     <br>
-                    <input type="checkbox" name="datatype" id="text" value="text">
+                    <input type="checkbox" name="datatype" id="text" value="text" checked>
                     <label class=tag for="text">&emsp;Text</label>
                     <br>
-                    <input type="checkbox" name="datatype" id="video" value="video">
+                    <input type="checkbox" name="datatype" id="video" value="video" checked>
                     <label class=tag for="video">&emsp;Video</label>
                 </div>
+
                 <div id=card>
-                    <p class=title>Compare</p>
-                    <br>
-                    <div id="compare" class="cardbox">
-                        <div class=card>
+                    <p class="title card_hide compare_card">Compare</p>
+                    <div id="compare_cardbox" class="cardbox">
+                        <div class="card compare_card card_hide">
                             <div class=card_title>
-                                <p>Compare</p>
+                                <p class=card_title_p>Compare</p>
                             </div>
                         </div>
-                        <div class=card>
+                        <div class="card compare_card card_hide">
                             <div class=card_title>
-                                <p>Compare</p>
+                                <p class=card_title_p>Compare</p>
                             </div>
                         </div>
-                        <div class=card>
+                        <div class="card compare_card card_hide">
                             <div class=card_title>
-                                <p>Compare</p>
+                                <p class=card_title_p>Compare</p>
                             </div>
                         </div>
-                        <div class=card>
+                        <div class="card compare_card card_hide">
                             <div class=card_title>
-                                <p>Compare</p>
+                                <p class=card_title_p>Compare</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="title card_hide compose_card">Compose</p>
+                    <div id="compose_cardbox" class="cardbox">
+                        <div class="card compose_card card_hide">
+                            <div class=card_title>
+                                <p class=card_title_p>Compose</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="title card_hide detect_card">Detect</p>
+                    <div id="detect_cardbox" class="cardbox">
+                        <div class="card detect_card card_hide">
+                            <div class=card_title>
+                                <p class=card_title_p>Detect</p>
                             </div>
                         </div>
                     </div>
@@ -165,6 +183,53 @@
                 checkboxes = document.getElementsByName('datatype');
                 for(var i=0, n=checkboxes.length; i<n; i++){
                     checkboxes[i].checked = source.checked;
+                }
+            }
+            function filter_capability(){
+                var checkBox = document.getElementById('capability');
+                var cards = document.getElementsByClassName('card_hide');
+                if (checkBox.checked == true){
+                    for(var i=0, n=cards.length; i<n; i++){
+                        cards[i].style.display = 'flex';
+                    }
+                } else {
+                    for(var i=0, n=cards.length; i<n; i++){
+                        cards[i].style.display = 'none';
+                    }
+                }
+            }
+            function filter_compare(){
+                var checkBox = document.getElementById('compare');
+                var cardBox = document.getElementById('compare_cardbox');
+                var cards = document.getElementsByClassName('compare_card');
+                console.log(cards);
+                if (checkBox.checked == true){
+                    for(var i=0, n=cards.length; i<n; i++){
+                        cards[i].style.display = 'block';
+                    }
+                    cardBox.style.display = 'flex';
+                } else {
+                    for(var i=0, n=cards.length; i<n; i++){
+                        cards[i].style.display = 'none';
+                    }
+                    cardBox.style.display = 'none';
+                }
+            }
+            function filter_compose(){
+                var checkBox = document.getElementById('compose');
+                var cardBox = document.getElementById('compose_cardbox');
+                var cards = document.getElementsByClassName('compose_card');
+                console.log(cards);
+                if (checkBox.checked == true){
+                    for(var i=0, n=cards.length; i<n; i++){
+                        cards[i].style.display = 'block';
+                    }
+                    cardBox.style.display = 'flex';
+                } else {
+                    for(var i=0, n=cards.length; i<n; i++){
+                        cards[i].style.display = 'none';
+                    }
+                    cardBox.style.display = 'none';
                 }
             }
         </script>
