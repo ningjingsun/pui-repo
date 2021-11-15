@@ -25,14 +25,99 @@
             <br>
             <div id=card_content>
                 <div id=filter>
-                    <input type="checkbox" id="capability" value="All capabilities">
-                    <label class=tag for="capability">&emsp;All capabilities</label>
+                    <input type="checkbox" name="capability" value="All capabilities" onclick="capabilitytoggle(this)">
+                    <label class=tag for="capability" style="font-family: 'aspira_heavy'">&emsp;All capabilities</label>
                     <br>
-                    <input type="checkbox" id="industry" value="All industries">
-                    <label class=tag for="industry">&emsp;All industries</label>
+                    <input type="checkbox" name="capability" id="compose" value="compose">
+                    <label class=tag for="compose">&emsp;Compose (10)</label>
                     <br>
-                    <input type="checkbox" id="data type" value="All data types">
-                    <label class=tag for="data type">&emsp;All data types</label>
+                    <input type="checkbox" name="capability" id="compare" value="compare">
+                    <label class=tag for="compare">&emsp;Compare (17)</label>
+                    <br>
+                    <input type="checkbox" name="capability" id="detect" value="detect">
+                    <label class=tag for="detect">&emsp;Detect (26)</label>
+                    <br>
+                    <input type="checkbox" name="capability" id="discover" value="discover">
+                    <label class=tag for="discover">&emsp;Discover (5)</label>
+                    <br>
+                    <input type="checkbox" name="capability" id="estimate" value="estimate">
+                    <label class=tag for="estimate">&emsp;Estimate (17)</label>
+                    <br>
+                    <input type="checkbox" name="capability" id="forecast" value="forecast">
+                    <label class=tag for="forecast">&emsp;Forecast (9)</label>
+                    <br>
+                    <input type="checkbox" name="capability" id="identify" value="identify">
+                    <label class=tag for="identify">&emsp;Identify (44)</label>
+                    <br>
+                    <input type="checkbox" name="capability" id="monitor" value="monitor">
+                    <label class=tag for="monitor">&emsp;Monitor (2)</label>
+                    <br>
+                    <input type="checkbox" name="capability" id="predict" value="predict">
+                    <label class=tag for="predict">&emsp;Predict (7)</label>
+                    <br>
+                    <input type="checkbox" name="capability" id="rate" value="rate">
+                    <label class=tag for="rate">&emsp;Rate (2)</label>
+                    <br>
+                    <br>
+                    <br>
+                    <input type="checkbox" name="industry" id="industry" value="All industries" onclick="industrytoggle(this)">
+                    <label class=tag for="industry" style="font-family: 'aspira_heavy'">&emsp;All industries</label>
+                    <br>
+                    <input type="checkbox" name="industry" id="commerce" value="commerce & sales">
+                    <label class=tag for="commerce">&emsp;Commerce & Sales (8)</label>
+                    <br>
+                    <input type="checkbox" name="industry" id="education" value="education">
+                    <label class=tag for="education">&emsp;Education (13)</label>
+                    <br>
+                    <input type="checkbox" name="industry" id="finance" value="finance">
+                    <label class=tag for="finance">&emsp;Finance (9)</label>
+                    <br>
+                    <input type="checkbox" name="industry" id="healthcare" value="healthcare">
+                    <label class=tag for="healthcare">&emsp;Healthcare (18)</label>
+                    <br>
+                    <input type="checkbox" name="industry" id="hospitality" value="hospitality">
+                    <label class=tag for="hospitality">&emsp;Hospitality (10)</label>
+                    <br>
+                    <input type="checkbox" name="industry" id="infrastructure" value="infrastructure">
+                    <label class=tag for="infrastructure">&emsp;Infrastructure & Utilities (4)</label>
+                    <br>
+                    <input type="checkbox" name="industry" id="leisure" value="leisure">
+                    <label class=tag for="leisure">&emsp;Leisure, Content & Media (18)</label>
+                    <br>
+                    <input type="checkbox" name="industry" id="manufacturing" value="manufacturing">
+                    <label class=tag for="manufacturing">&emsp;Manufacturing, Production & Agriculture (16)</label>
+                    <br>
+                    <input type="checkbox" name="industry" id="office" value="office">
+                    <label class=tag for="office">&emsp;Office Productivity & Business Workflow (3)</label>
+                    <br>
+                    <input type="checkbox" name="industry" id="professional" value="professional">
+                    <label class=tag for="professional">&emsp;Professional Services (16)</label>
+                    <br>
+                    <input type="checkbox" name="industry" id="risk" value="risk">
+                    <label class=tag for="risk">&emsp;Risk Mitigation & Security (13)</label>
+                    <br>
+                    <input type="checkbox" name="industry" id="transportation" value="transportation">
+                    <label class=tag for="transportation">&emsp;Transportation (16)</label>
+                    <br>
+                    <br>
+                    <br>
+                    <input type="checkbox" name="data type" id="data type" value="All data types" onclick="datatypetoggle(this)">
+                    <label class=tag for="data type" style="font-family: 'aspira_heavy'">&emsp;All data types</label>
+                    <br>
+                    <input type="checkbox" name="datatype" id="audio" value="audio">
+                    <label class=tag for="audio">&emsp;Audio</label>
+                    <br>
+                    <input type="checkbox" name="datatype" id="image" value="image">
+                    <label class=tag for="image">&emsp;Image</label>
+                    <br>
+                    <input type="checkbox" name="datatype" id="tabular" value="tabular">
+                    <label class=tag for="tabular">&emsp;Tabular</label>
+                    <br>
+                    <input type="checkbox" name="datatype" id="text" value="text">
+                    <label class=tag for="text">&emsp;Text</label>
+                    <br>
+                    <input type="checkbox" name="datatype" id="video" value="video">
+                    <label class=tag for="video">&emsp;Video</label>
                 </div>
                 <div id=card>
                     <p class=title>Compare</p>
@@ -62,6 +147,27 @@
                 </div>
             </div>
         </div>
+
+        <script>
+            function capabilitytoggle(source){
+                checkboxes = document.getElementsByName('capability');
+                for(var i=0, n=checkboxes.length; i<n; i++){
+                    checkboxes[i].checked = source.checked;
+                }
+            }
+            function industrytoggle(source){
+                checkboxes = document.getElementsByName('industry');
+                for(var i=0, n=checkboxes.length; i<n; i++){
+                    checkboxes[i].checked = source.checked;
+                }
+            }
+            function datatypetoggle(source){
+                checkboxes = document.getElementsByName('datatype');
+                for(var i=0, n=checkboxes.length; i<n; i++){
+                    checkboxes[i].checked = source.checked;
+                }
+            }
+        </script>
     </body>
 
 </html>
