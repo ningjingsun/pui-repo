@@ -60,7 +60,7 @@
                     <br>
                     <br>
                     <br>
-                    <input type="checkbox" name="industry" id="industry" value="All industries" onclick="industrytoggle(this)" checked>
+                    <input type="checkbox" name="industry" id="industry" value="All industries" onclick="industrytoggle(this); filter_industry()" checked>
                     <label class=tag for="industry" style="font-family: 'aspira_heavy'">&emsp;All industries</label>
                     <br>
                     <input type="checkbox" name="industry" id="commerce" value="commerce & sales" checked>
@@ -101,7 +101,7 @@
                     <br>
                     <br>
                     <br>
-                    <input type="checkbox" name="data type" id="data type" value="All data types" onclick="datatypetoggle(this)" checked>
+                    <input type="checkbox" name="data type" id="data type" value="All data types" onclick="datatypetoggle(this); filter_datatype()" checked>
                     <label class=tag for="data type" style="font-family: 'aspira_heavy'">&emsp;All data types</label>
                     <br>
                     <input type="checkbox" name="datatype" id="audio" value="audio" checked>
@@ -187,6 +187,7 @@
         </div>
 
         <script>
+            // "select all" checkbox
             function capabilitytoggle(source){
                 checkboxes = document.getElementsByName('capability');
                 for(var i=0, n=checkboxes.length; i<n; i++){
@@ -205,6 +206,8 @@
                     checkboxes[i].checked = source.checked;
                 }
             }
+
+            // "select all" checkbox; all cards disappear
             function filter_capability(){
                 var checkBox = document.getElementById('capability');
                 var cards = document.getElementsByClassName('card_hide');
@@ -218,6 +221,34 @@
                     }
                 }
             }
+            function filter_industry(){
+                var checkBox = document.getElementById('industry');
+                var cards = document.getElementsByClassName('card_hide');
+                if (checkBox.checked == true){
+                    for(var i=0, n=cards.length; i<n; i++){
+                        cards[i].style.display = 'block';
+                    }
+                } else {
+                    for(var i=0, n=cards.length; i<n; i++){
+                        cards[i].style.display = 'none';
+                    }
+                }
+            }
+            function filter_datatype(){
+                var checkBox = document.getElementById('datatype');
+                var cards = document.getElementsByClassName('card_hide');
+                if (checkBox.checked == true){
+                    for(var i=0, n=cards.length; i<n; i++){
+                        cards[i].style.display = 'block';
+                    }
+                } else {
+                    for(var i=0, n=cards.length; i<n; i++){
+                        cards[i].style.display = 'none';
+                    }
+                }
+            }
+
+            // each filter
             function filter_compare(){
                 var checkBox = document.getElementById('compare');
                 var cardBox = document.getElementById('compare_cardbox');
