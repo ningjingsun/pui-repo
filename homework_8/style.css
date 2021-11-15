@@ -24,13 +24,13 @@
 }
 
 body{
-    margin: 3vw;
-    margin-top: 1.4vw;
+    margin: 4vw;
+    margin-top: 2vw;
 }
 #header{
     position:absolute;
-    top: 3vw;
-    right: 3vw;
+    top: 2.5vw;
+    right: 4vw;
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
@@ -41,10 +41,59 @@ body{
     font-style: bold;
     color: rgb(50, 50, 50);
     font-size: 3.6vw; 
+    line-height: 4.4vw;
 }
 p{
     font-family: 'aspira_normal';
     font-style: normal;
     color: rgb(50, 50, 50);
     font-size: 1.4vw;
+    line-height: 2.4vw;
+}
+.tag{
+    font-family: 'aspira_normal';
+    font-style: normal;
+    color: rgb(50, 50, 50);
+    font-size: 1.2vw;
+    line-height: 1.8vw;
+}
+.title{
+    font-family: 'aspira_heavy';
+    font-style: heavy;
+    color: rgb(50, 50, 50);
+    font-size: 1.8vw;
+    line-height: 2.4vw;
+}
+#card_content{
+    display: flex;
+    max-width: 100%;
+    gap: 4vw;
+    flex-direction: row;
+}
+@media (max-width: 800px) {
+    /* responsive flexbox */
+    #card_content {
+      flex-direction: column;
+    }
+    /* responsive font size */
+}
+#filter{
+    width: 25%;
+}
+#card{
+    width: 75%;
+}
+.cardbox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    gap: 3vw;
+}
+.card{
+    width: 15vw;
+    height: 17vw;
+    background-color: red;
+    border-radius: 1.6vw;
+    padding: 2vw;
 }
