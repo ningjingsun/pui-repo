@@ -72,7 +72,7 @@ p{
 #card_content{
     display: flex;
     max-width: 100%;
-    gap: 4vw;
+    gap: 3.6vw;
     flex-direction: row;
 }
 @media (max-width: 800px) {
@@ -98,7 +98,7 @@ p{
     margin-bottom: 3vw;
 }
 .card{
-    width: 14vw;
+    width: 13.8vw;
     height: 17vw;
     background-color: white;
     border-radius: 1.2vw;
