@@ -89,11 +89,28 @@ p{
     justify-content: flex-start;
     align-content: flex-start;
     gap: 3vw;
+    margin-top: 2vw;
+    margin-bottom: 3vw;
 }
 .card{
     width: 15vw;
     height: 17vw;
-    background-color: red;
-    border-radius: 1.6vw;
-    padding: 2vw;
+    background-color: white;
+    border-radius: 1.2vw;
+    border: solid rgb(255, 79, 35);
+    border-width: 1px;
+    /* box-shadow: h-offset v-offset blur spread color |inset|initial|inherit; */
+    box-shadow: 0px 4px 24px 2px rgba(0, 0, 0, 0.1);
+    padding: 1.2vw;
+}
+.card_title{
+    border-radius: 2vw;
+    background-color: rgb(255, 79, 35);
+    padding: 0.4vw;
+    padding-left: 1.2vw;
+}
+.card_title_p{
+    color: white;
+    font-family: 'aspira_heavy';
+    font-style: heavy;
 }
