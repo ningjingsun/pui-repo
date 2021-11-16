@@ -2,9 +2,6 @@
     margin: 0;
     padding: 0;
 }
-::-webkit-scrollbar {
-    width: 0px;  /* Remove scrollbar space */
-}
 @font-face {
     font-family: 'aspira_heavy';
     font-style: heavy;
@@ -30,12 +27,16 @@
     font-style: light;
     src: url(fonts/aspira_light.otf);
 }
-
 body{
     margin: 4vw;
+    margin-right: 0vw;
     margin-top: 0vw;
     height: 100%; 
     overflow: hidden;
+}
+::-webkit-scrollbar-thumb{
+    scrollbar-width: 5px;
+    background:rgb(219, 219, 219);
 }
 #header{
     padding-top: 2vw;
@@ -76,16 +77,25 @@ body{
     float: left;
     overflow-x: hidden;
     overflow-y: scroll;
-    padding-top: 16vh;
     padding-left: 0.5vw;
     padding-right: 1vw;
     width: 18%;
+    margin-top: 14vh;
+    padding-top: 2vh;
+}
+#filter{
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+#filter::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
 }
 #card{
     float: left;
     overflow-x: hidden;
     overflow-y: scroll;
-    padding-top: 16vh;
+    margin-top: 14vh;
+    padding-top: 2vh;
     padding-left: 3vw;
     padding-right: 1.1vw;
     width: 82%;
@@ -164,7 +174,7 @@ p{
 }
 .card{
     width: 13.8vw;
-    height: 17vw;
+    height: 17.1vw;
     background-color: white;
     border-radius: 1.2vw;
     /* box-shadow: h-offset v-offset blur spread color |inset|initial|inherit; */
@@ -193,7 +203,7 @@ p{
     border-radius: 2vw;
     background-color: rgb(255, 79, 35);
     padding: 0.3vw;
-    padding-left: 1.2vw;
+    padding-left: 1vw;
 }
 .compare_card_title{
     background-color: rgb(255, 79, 35);
@@ -210,7 +220,8 @@ p{
     font-style: heavy;
 }
 .card_text{
-    padding-left: 1vw;
+    padding-left: 0.8vw;
+    padding-right: 0.8vw;
     padding-top: 1vw;
     height: 38%;
 }
@@ -220,8 +231,11 @@ p{
     line-height: 2vw;
     font-family: "aspira_light";
 }
+.card_tag{
+    margin-top: 1.8vw;
+}
 .tag0{
-    margin-top: 1.1vw;
+    margin-top: 1vw;
 }
 .tag1{
     position: relative;
@@ -234,35 +248,18 @@ p{
     padding-right: 1vw;
     width: auto;
     font-size: 0.8vw;
-    background-color: white;
-    opacity: 0.6;
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px); 
-    z-index: 20;
-}
-.tag2{
-    position: relative;
-    display: inline;
-    border: solid rgb(178, 183, 190);
-    border-width: 1px;
-    border-radius: 2vw;
-    padding: 0.8vw;
-    padding-left: 1vw;
-    padding-right: 1vw;
-    width: auto;
-    font-size: 0.8vw;
-    background-color: white;
-    opacity: 0.6;
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px); 
+    background-color: rgba(255, 255, 255, 0.7);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px); 
+    opacity: 0.8;
     z-index: 20;
 }
 .card_img{
     position: absolute;
-    top: 9vw;
+    top: 9.5vw;
     right: 1vw;
 }
 .card_icon{
     width: 8vw;
-    opacity: 0.07;
+    opacity: 0.05;
 }
