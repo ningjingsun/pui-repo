@@ -202,23 +202,23 @@ p{
     position: relative;
 }
 .compare_cards{
-    border: solid rgb(255, 79, 35);
+    border: solid rgb(255, 61, 13);
     border-width: 1.3px;
 }
 .compose_cards{
-    border: solid rgb(3, 175, 255);
+    border: solid rgb(0, 162, 255);
     border-width: 1.3px;
 }
 .detect_cards{
-    border: solid rgb(255, 200, 20);
+    border: solid rgb(255, 187, 0);
     border-width: 1.3px;
 }
 .discover_cards{
-    border: solid rgb(167, 86, 231);
+    border: solid rgb(165, 69, 238);
     border-width: 1.3px;
 }
 .estimate_cards{
-    border: solid rgb(255, 142, 36);
+    border: solid rgb(255, 127, 23);
     border-width: 1.3px;
 }
 .forecast_cards{
@@ -240,24 +240,24 @@ p{
 }
 .card_title{
     border-radius: 40px;
-    background-color: rgb(255, 79, 35);
+    background-color: rgb(255, 61, 13);
     padding: 10px;
     padding-left: 17px;
 }
 .compare_card_title{
-    background-color: rgb(255, 79, 35);
+    background-color: rgb(255, 61, 13);
 }
 .compose_card_title{
-    background-color: rgb(3, 175, 255);
+    background-color: rgb(0, 162, 255);
 }
 .detect_card_title{
-    background-color: rgb(255, 200, 20);
+    background-color: rgb(255, 187, 0);
 }
 .discover_card_title{
-    background-color: rgb(167, 86, 231);
+    background-color: rgb(165, 69, 238);
 }
 .estimate_card_title{
-    background-color: rgb(255, 142, 36);
+    background-color: rgb(255, 127, 23);
 }
 .forecast_card_title{
     background-color: rgb(255, 82, 166);
@@ -280,31 +280,31 @@ p{
     height: 38%;
 }
 .compare_card_text{
-    color: rgba(255, 79, 35, 0.9);
+    color: rgba(255, 61, 13);
     font-size: 23px;
     line-height: 31px;
     font-family: "aspira_light";
 }
 .compose_card_text{
-    color: rgb(3, 175, 255);
+    color: rgb(0, 162, 255);
     font-size: 23px;
     line-height: 31px;
     font-family: "aspira_light";
 }
 .detect_card_text{
-    color: rgb(240, 184, 1);
+    color: rgb(255, 187, 0);
     font-size: 23px;
     line-height: 31px;
     font-family: "aspira_light";
 }
 .discover_card_text{
-    color: rgb(167, 86, 231);
+    color: rgb(165, 69, 238);
     font-size: 23px;
     line-height: 31px;
     font-family: "aspira_light";
 }
 .estimate_card_text{
-    color: rgb(255, 142, 36);
+    color: rgb(255, 127, 23);
     font-size: 23px;
     line-height: 31px;
     font-family: "aspira_light";
@@ -366,4 +366,70 @@ p{
     /* width: 8vw; */
     width: 144px; 
     opacity: 0.05;
+}
+#top_header{
+    height: 250px;
+    width: 100vw;
+    padding-left: 56px;
+    padding-top: 46px;
+    background-color: rgb(255, 187, 0);
+    position: relative;
+}
+.logo_light{
+    font-family: 'aspira_light';
+    font-style: light;
+    color: rgba(255, 255, 255, 0.9); 
+    font-size: 60px;
+    line-height: 60px;
+}
+.logo_black{
+    font-family: 'aspira_black';
+    font-style: black;
+    color: rgba(255, 255, 255, 1); 
+    /* font-size: 46px;
+    line-height: 54px; */
+    font-size: 60px;
+    line-height: 70px;
+}
+.go_back{
+    color: rgba(255, 255, 255, 1);
+    font-family: 'aspira_light';
+    font-style: light;
+}
+.header_img{
+    position: absolute;
+    top: 30px;
+    right: 100px;
+}
+.header_img_size{
+    filter: invert(100%);
+    opacity: 0.15;
+    width: 240px;
+}
+.tag2{
+    font-family: 'aspira_normal';
+    font-style: normal;
+    color: rgb(50, 50, 50);
+    font-size: 16px;
+    /* line-height: 2.2vw; */
+    line-height: 28px;
+    display: inline;
+    border: solid rgb(178, 183, 190);
+    border-width: 1px;
+    /* border-radius: 2vw; */
+    border-radius: 30px;
+    /* padding: 0.7vw; */
+    padding: 11px;
+    /* padding-left: 1vw; */
+    padding-left: 18px;
+    /* padding-right: 1vw; */
+    padding-right: 18px;
+    width: auto;
+    /* font-size: 0.8vw; */
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, 0.7);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px); 
+    opacity: 0.8;
+    z-index: 20;
 }
