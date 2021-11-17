@@ -150,9 +150,12 @@ p{
     font-family: 'aspira_normal';
     font-style: normal;
     color: rgb(50, 50, 50);
-    font-size: 21px;
+    font-size: 18px;
     /* line-height: 2vw; */
     line-height: 26px;
+}
+.card_title_p{
+    font-size: 20px;
 }
 .tag{
     font-family: 'aspira_normal';
@@ -196,7 +199,7 @@ p{
     /* border-radius: 1vw; */
     border-radius: 18px;
     /* box-shadow: h-offset v-offset blur spread color |inset|initial|inherit; */
-    box-shadow: 0px 4px 24px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 20px 2px rgba(0, 0, 0, 0.12);
     /* padding: 1vw; */
     padding: 17px;
     position: relative;
@@ -210,29 +213,29 @@ p{
     border-width: 1.3px;
 }
 .detect_cards{
-    border: solid rgb(255, 187, 0);
+    border: solid rgb(255, 133, 18);
     border-width: 1.3px;
 }
 .discover_cards{
-    border: solid rgb(165, 69, 238);
-    border-width: 1.3px;
-}
-.estimate_cards{
-    border: solid rgb(255, 127, 23);
-    border-width: 1.3px;
-}
-.forecast_cards{
     border: solid rgb(255, 82, 166);
     border-width: 1.3px;
 }
-.identify_cards{
+.estimate_cards{
+    border: solid rgb(165, 69, 238);
+    border-width: 1.3px;
+}
+.forecast_cards{
     border: solid rgb(0, 204, 10);
     border-width: 1.3px;
 }
-.act_cards{
+.identify_cards{
     border: solid rgb(20, 102, 255);
     border-width: 1.3px;
 }
+/* .act_cards{
+    border: solid rgb(20, 102, 255);
+    border-width: 1.3px;
+} */
 .card:hover{
     transform: translate(-10px, -10px);
     transition-timing-function: ease-in;
@@ -251,23 +254,23 @@ p{
     background-color: rgb(0, 162, 255);
 }
 .detect_card_title{
-    background-color: rgb(255, 187, 0);
+    background-color: rgb(255, 133, 18);
 }
 .discover_card_title{
-    background-color: rgb(165, 69, 238);
-}
-.estimate_card_title{
-    background-color: rgb(255, 127, 23);
-}
-.forecast_card_title{
     background-color: rgb(255, 82, 166);
 }
-.identify_card_title{
+.estimate_card_title{
+    background-color: rgb(165, 69, 238);
+}
+.forecast_card_title{
     background-color: rgb(0, 204, 10);
 }
-.act_card_title{
+.identify_card_title{
     background-color: rgb(20, 102, 255);
 }
+/* .act_card_title{
+    background-color: rgb(20, 102, 255);
+} */
 .card_title_p{
     color: white;
     font-family: 'aspira_heavy';
@@ -292,41 +295,41 @@ p{
     font-family: "aspira_light";
 }
 .detect_card_text{
-    color: rgb(255, 187, 0);
+    color: rgb(255, 133, 18);
     font-size: 23px;
     line-height: 31px;
     font-family: "aspira_light";
 }
 .discover_card_text{
-    color: rgb(165, 69, 238);
-    font-size: 23px;
-    line-height: 31px;
-    font-family: "aspira_light";
-}
-.estimate_card_text{
-    color: rgb(255, 127, 23);
-    font-size: 23px;
-    line-height: 31px;
-    font-family: "aspira_light";
-}
-.forecast_card_text{
     color: rgb(255, 82, 166);
     font-size: 23px;
     line-height: 31px;
     font-family: "aspira_light";
 }
-.identify_card_text{
+.estimate_card_text{
+    color: rgb(165, 69, 238);
+    font-size: 23px;
+    line-height: 31px;
+    font-family: "aspira_light";
+}
+.forecast_card_text{
     color: rgb(0, 204, 10);
     font-size: 23px;
     line-height: 31px;
     font-family: "aspira_light";
 }
-.act_card_text{
+.identify_card_text{
     color: rgb(20, 102, 255);
     font-size: 23px;
     line-height: 31px;
     font-family: "aspira_light";
 }
+/* .act_card_text{
+    color: rgb(20, 102, 255);
+    font-size: 23px;
+    line-height: 31px;
+    font-family: "aspira_light";
+} */
 .card_tag{
     margin-top: 32px;
 }
@@ -367,13 +370,26 @@ p{
     width: 144px; 
     opacity: 0.05;
 }
+
+
+
+
+
+
+
+
+
+
+/* detail page */
 #top_header{
-    height: 250px;
+    height: 245px;
     width: 100vw;
     padding-left: 56px;
-    padding-top: 46px;
-    background-color: rgb(255, 187, 0);
+    padding-top: 43px;
     position: relative;
+}
+.detect_header{
+    background-color: rgb(255, 133, 18);
 }
 .logo_light{
     font-family: 'aspira_light';
@@ -419,17 +435,49 @@ p{
     /* border-radius: 2vw; */
     border-radius: 30px;
     /* padding: 0.7vw; */
-    padding: 11px;
+    padding: 18px;
     /* padding-left: 1vw; */
-    padding-left: 18px;
+    padding-left: 22px;
     /* padding-right: 1vw; */
-    padding-right: 18px;
+    padding-right: 22px;
     width: auto;
     /* font-size: 0.8vw; */
-    font-size: 14px;
+    font-size: 16px;
     background-color: rgba(255, 255, 255, 0.7);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px); 
     opacity: 0.8;
     z-index: 20;
+}
+.red_tag_selected{
+    background-color: rgb(255, 133, 18);
+    opacity: 1;
+    border: none;
+    color: white;
+}
+#description{
+    margin-left: 56px;
+    margin-right: 56px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 60px;
+    padding-top: 56px;
+    border: solid rgba(178, 183, 190, 0.5);
+    border-width: 1px;
+    border-radius: 24px;
+    background-color: white;
+    border-style: solid;
+    box-shadow: 0px 4px 14px 2px rgba(0, 0, 0, 0.1);
+}
+.feature_title{
+    font-family: 'aspira_bold';
+    font-style: bold;
+}
+.description_text{
+    font-family: 'aspira_normal';
+    font-style: normal;
+    font-size: 17px;
+    /* line-height: 2vw; */
+    line-height: 32px;
+    color: rgba(0, 0, 0, 0.7);
 }
