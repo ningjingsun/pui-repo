@@ -34,7 +34,8 @@ body{
     margin-top: 0;
     height: 100%; 
     margin-bottom: 0;
-    overflow: hidden;
+    overflow-x: hidden;
+    /* overflow: hidden; */
 }
 a{
     text-decoration: none;
@@ -193,8 +194,8 @@ p{
 .card{
     /* width: 13.8vw;
     height: 16.4vw;  */
-    width: 236px;
-    height: 283px;
+    width: 234px;
+    height: 274px;
     background-color: white;
     /* border-radius: 1vw; */
     border-radius: 18px;
@@ -243,12 +244,12 @@ p{
 }
 .card_title{
     border-radius: 40px;
-    background-color: rgb(255, 61, 13);
+    background-color: rgb(228, 78, 40);
     padding: 10px;
     padding-left: 17px;
 }
 .compare_card_title{
-    background-color: rgb(255, 61, 13);
+    background-color: rgb(241, 77, 36);
 }
 .compose_card_title{
     background-color: rgb(0, 162, 255);
@@ -283,45 +284,45 @@ p{
     height: 38%;
 }
 .compare_card_text{
-    color: rgba(255, 61, 13);
-    font-size: 23px;
-    line-height: 31px;
+    color: rgba(228, 78, 40);
+    font-size: 21px;
+    line-height: 29px;
     font-family: "aspira_light";
 }
 .compose_card_text{
     color: rgb(0, 162, 255);
-    font-size: 23px;
-    line-height: 31px;
+    font-size: 21px;
+    line-height: 29px;
     font-family: "aspira_light";
 }
 .detect_card_text{
     color: rgb(255, 133, 18);
-    font-size: 23px;
-    line-height: 31px;
+    font-size: 21px;
+    line-height: 29px;
     font-family: "aspira_light";
 }
 .discover_card_text{
     color: rgb(255, 82, 166);
-    font-size: 23px;
-    line-height: 31px;
+    font-size: 21px;
+    line-height: 29px;
     font-family: "aspira_light";
 }
 .estimate_card_text{
     color: rgb(165, 69, 238);
-    font-size: 23px;
-    line-height: 31px;
+    font-size: 21px;
+    line-height: 29px;
     font-family: "aspira_light";
 }
 .forecast_card_text{
     color: rgb(0, 204, 10);
-    font-size: 23px;
-    line-height: 31px;
+    font-size: 21px;
+    line-height: 29px;
     font-family: "aspira_light";
 }
 .identify_card_text{
     color: rgb(20, 102, 255);
-    font-size: 23px;
-    line-height: 31px;
+    font-size: 21px;
+    line-height: 29px;
     font-family: "aspira_light";
 }
 /* .act_card_text{
@@ -382,14 +383,33 @@ p{
 
 /* detail page */
 #top_header{
-    height: 245px;
+    /* height: 250px; */
     width: 100vw;
-    padding-left: 56px;
-    padding-top: 43px;
+    padding-left: 72px;
+    padding-top: 40px;
+    padding-bottom: 40px;
     position: relative;
+}
+.compare_header{
+    background-color: rgb(255, 61, 13);
+}
+.compose_header{
+    background-color: rgb(0, 162, 255);
 }
 .detect_header{
     background-color: rgb(255, 133, 18);
+}
+.discover_header{
+    background-color: rgb(255, 82, 166);
+}
+.estimate_header{
+    background-color: rgb(165, 69, 238);
+}
+.forecast_header{
+    background-color: rgb(0, 204, 10);
+}
+.identify_header{
+    background-color: rgb(20, 102, 255);
 }
 .logo_light{
     font-family: 'aspira_light';
@@ -415,7 +435,7 @@ p{
 .header_img{
     position: absolute;
     top: 30px;
-    right: 100px;
+    right: 120px;
 }
 .header_img_size{
     filter: invert(100%);
@@ -450,24 +470,65 @@ p{
     z-index: 20;
 }
 .red_tag_selected{
+    background-color: rgb(255, 61, 13);
+    opacity: 1;
+    border: none;
+    color: white;
+}
+.blue_tag_selected{
+    background-color: rgb(0, 162, 255);
+    opacity: 1;
+    border: none;
+    color: white;
+}
+.orange_tag_selected{
     background-color: rgb(255, 133, 18);
     opacity: 1;
     border: none;
     color: white;
 }
-#description{
-    margin-left: 56px;
-    margin-right: 56px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    padding: 60px;
-    padding-top: 56px;
+.purple_tag_selected{
+    background-color: rgb(165, 69, 238);
+    opacity: 1;
+    border: none;
+    color: white;
+}
+.pink_tag_selected{
+    background-color: rgb(255, 82, 166);
+    opacity: 1;
+    border: none;
+    color: white;
+}
+.green_tag_selected{
+    background-color: rgb(0, 204, 10);
+    opacity: 1;
+    border: none;
+    color: white;
+}
+.darkblue_tag_selected{
+    background-color: rgb(20, 102, 255);
+    opacity: 1;
+    border: none;
+    color: white;
+}
+.description{
+    margin-left: 72px;
+    margin-right: 400px;
+    margin-top: 54px;
+    margin-bottom: 0px;
+    /* padding: 60px;
+    padding-top: 56px; */
     border: solid rgba(178, 183, 190, 0.5);
     border-width: 1px;
     border-radius: 24px;
     background-color: white;
     border-style: solid;
     box-shadow: 0px 4px 14px 2px rgba(0, 0, 0, 0.1);
+}
+#description_text_block{
+    margin: 60px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 .feature_title{
     font-family: 'aspira_bold';
@@ -478,6 +539,106 @@ p{
     font-style: normal;
     font-size: 17px;
     /* line-height: 2vw; */
-    line-height: 32px;
+    line-height: 30px;
     color: rgba(0, 0, 0, 0.7);
+}
+#sequence{
+    /* width: 100%; */
+    padding: 60px;
+    padding-top: 40px;
+    padding-bottom: 0;
+}
+#sequence2{
+    /* width: 100%; */
+    border: solid rgba(178, 183, 190, 0.5);
+    border-style: solid none none none;
+    border-width: 1px;
+}
+#scrollable{
+    width: calc(100vw - 534px);
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-top: 40px;
+    padding-bottom: 70px;
+    padding-left: 60px;
+    padding-right: 0;
+    scrollbar-width: none;
+}
+#scrollable::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+#datatype{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+}
+.child1{
+    /* flex-grow: 1; */
+    width: 13%;
+    background-color: rgb(230, 230, 230);
+    padding: 60px;
+    padding-top: 40px;
+    border-radius: 0px 0px 0px 24px;
+}
+.child2{
+    /* flex-grow: 2; */
+    width: 29%;
+    padding: 60px;
+    padding-top: 40px;
+    border: solid rgba(178, 183, 190, 0.5);
+    border-width: 1px;
+    border-style: none solid none none;
+}
+.child3{
+    /* flex-grow: 2; */
+    width: 29%;
+    padding: 60px;
+    padding-top: 40px;
+    border: solid rgba(178, 183, 190, 0.5);
+    border-width: 1px;
+    border-style: none solid none none;
+}
+.child4{
+    /* flex-grow: 2; */
+    width: 29%;
+    padding: 60px;
+    padding-top: 40px;
+}
+.tag3{
+    background-color: rgb(240, 240, 240);
+}
+.tag3_orange:hover{
+    background-color: rgba(255, 240, 236);
+    border-color: rgb(255, 133, 18);
+    color: rgb(228, 110, 0);
+}
+.tag3_red:hover{
+    background-color: rgba(255, 61, 13, 0.15);
+    border-color: rgb(255, 61, 13);
+    color: rgb(255, 61, 13);
+}
+.tag3_green:hover{
+    background-color: rgba(0, 204, 10, 0.15);
+    border-color: rgb(0, 204, 10);
+    color: rgb(0, 177, 9);
+}
+.tag3_pink:hover{
+    background-color: rgba(255, 82, 166, 0.15);
+    border-color: rgb(255, 82, 166);
+    color: rgb(255, 35, 141);
+}
+.tag3_blue:hover{
+    background-color: rgba(0, 162, 255, 0.15);
+    border-color: rgb(0, 162, 255);
+    color: rgb(0, 127, 231);
+}
+.tag3_darkblue:hover{
+    background-color: rgba(20, 102, 255, 0.15);
+    border-color: rgb(20, 102, 255);
+    color: rgb(20, 102, 255);
+}
+.tag3_purple:hover{
+    background-color: rgba(165, 69, 238, 0.15);
+    border-color: rgb(165, 69, 238);
+    color: rgb(146, 30, 235);
 }
