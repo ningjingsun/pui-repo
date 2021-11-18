@@ -29,13 +29,20 @@
 }
 body{
     /* margin: 4vw; */
-    margin: 72px;
-    margin-right: 0;
+    /* margin: 72px;
+    margin-left: 86px;
+    margin-right: 0; */
     margin-top: 0;
-    height: 100%; 
+    padding-top: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    width: 100vw;
+    height: 100vh;
     margin-bottom: 0;
     overflow-x: hidden;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 a{
     text-decoration: none;
@@ -46,19 +53,25 @@ a{
 }
 #header{
     /* padding-top: 1.6vw; */
-    padding-top: 28px;
+    /* padding-top: 28px; */
     border: 1px;
-    position: fixed;
+    /* position: fixed; */
     border-style: none none solid none;
     display: flex;
     justify-content: space-between;
-    width: 92%;
+    width: 91%;
+    width: 90%;
     background-color: white;
     z-index: 100;
-    height: 77px;
+    height: 75px;
     border-color: rgba(0, 0, 0, 0.2);
-    margin-right: 72px;
-    /* background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.1)); */
+    padding-left: 86px;
+    /* position: absolute; */
+    margin-top: 0;
+    padding-right: 100px;
+    padding-top: 50px;
+    /* background: linear-grad
+    ient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.1)); */
     /* background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 80%, rgba(255, 255, 255, 0)); */
 }
 #navigation{
@@ -70,6 +83,9 @@ a{
     padding-top: 18px;
 }
 #card_content{
+    margin: 70px;
+    margin-left: 86px;
+    margin-right: 0;
     display: flex;
     max-width: 100%;
     /* gap: 1vw; */
@@ -79,10 +95,15 @@ a{
     height: calc(100vh - 100px);
     max-height: calc(100vh - 100px);
     overflow: hidden;
-    padding-top: 105px;
+    padding-top: 0px;
+    margin-top: 0px;
     margin-bottom: 0;
     padding-bottom: 0;
     /* padding-bottom: 120px; */
+}
+#content{
+    margin: 0;
+    padding: 0;
 }
 #filter{
     /* border: 1px;
@@ -94,7 +115,7 @@ a{
     /* padding-left: 0.5vw; */
     padding-left: 7px;
     /* padding-right: 1vw; */
-    padding-right: 20px;
+    padding-right: 24px;
     width: 18%;
     padding-bottom: 40px;
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
@@ -107,8 +128,8 @@ a{
     float: left;
     overflow-x: hidden;
     overflow-y: scroll;
-    padding-left: 72px;
-    padding-right: 72px;
+    padding-left: 5.6vw;
+    padding-right: 20px;
     /* padding-bottom: 20px; */
     width: 82%;
 }
@@ -144,8 +165,8 @@ input[type=checkbox]{
     font-family: 'aspira_bold';
     font-style: bold;
     color: rgb(50, 50, 50); 
-    font-size: 46px;
-    line-height: 54px;
+    font-size: 40px;
+    line-height: 44px;
 }
 p{
     font-family: 'aspira_normal';
@@ -194,11 +215,11 @@ p{
 .card{
     /* width: 13.8vw;
     height: 16.4vw;  */
-    width: 234px;
+    width: 223px;
     height: 274px;
     background-color: white;
     /* border-radius: 1vw; */
-    border-radius: 18px;
+    border-radius: 16.6px;
     /* box-shadow: h-offset v-offset blur spread color |inset|initial|inherit; */
     box-shadow: 0px 4px 20px 2px rgba(0, 0, 0, 0.12);
     /* padding: 1vw; */
@@ -384,8 +405,8 @@ p{
 /* detail page */
 #top_header{
     /* height: 250px; */
-    width: 100vw;
-    padding-left: 72px;
+    width: 96vw;
+    padding-left: 100px;
     padding-top: 40px;
     padding-bottom: 40px;
     position: relative;
@@ -435,7 +456,7 @@ p{
 .header_img{
     position: absolute;
     top: 30px;
-    right: 120px;
+    right: 76px;
 }
 .header_img_size{
     filter: invert(100%);
@@ -512,8 +533,8 @@ p{
     color: white;
 }
 .description{
-    margin-left: 72px;
-    margin-right: 400px;
+    margin-left: 100px;
+    margin-right: 420px;
     margin-top: 54px;
     margin-bottom: 0px;
     /* padding: 60px;
