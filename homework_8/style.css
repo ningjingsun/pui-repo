@@ -42,7 +42,7 @@ body{
     height: 100vh;
     margin-bottom: 0;
     overflow-x: hidden;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 a{
     text-decoration: none;
@@ -69,7 +69,7 @@ a{
     /* position: absolute; */
     margin-top: 0;
     padding-right: 100px;
-    padding-top: 50px;
+    padding-top: 36px;
     /* background: linear-grad
     ient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.1)); */
     /* background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 80%, rgba(255, 255, 255, 0)); */
@@ -80,7 +80,7 @@ a{
     align-items: flex-start;
     gap: 4vw;
     /* padding-top: 1vw; */
-    padding-top: 18px;
+    padding-top: 13px;
 }
 #card_content{
     margin: 70px;
@@ -208,7 +208,7 @@ p{
     flex-wrap: wrap;
     justify-content: flex-start;
     align-content: flex-start;
-    gap: 2vw;
+    /* gap: 2vw; */
     margin-top: 1.8vw;
     margin-bottom: 3vw;
 }
@@ -225,6 +225,8 @@ p{
     /* padding: 1vw; */
     padding: 17px;
     position: relative;
+    margin-right: 2vw;
+    margin-bottom: 2vw;
 }
 .compare_cards{
     border: solid rgb(255, 61, 13);
@@ -576,7 +578,7 @@ p{
     border-width: 1px;
 }
 #scrollable{
-    width: calc(100vw - 534px);
+    width: calc(100vw - 582px);
     overflow-x: auto;
     white-space: nowrap;
     padding-top: 40px;
