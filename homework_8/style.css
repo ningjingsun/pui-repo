@@ -87,7 +87,7 @@ a{
     color: black;
 }
 .navigation_tab:hover{
-    opacity: 0.6;
+    opacity: 0.5;
     color: black;
 }
 #card_content{
@@ -185,7 +185,7 @@ p{
     line-height: 26px;
 }
 .card_title_p{
-    font-size: 20px;
+    font-size: 21px;
 }
 .tag{
     font-family: 'aspira_normal';
@@ -193,7 +193,7 @@ p{
     color: rgb(50, 50, 50);
     font-size: 16px;
     /* line-height: 2.2vw; */
-    line-height: 28px;
+    line-height: 29px;
 }
 .title{
     font-family: 'aspira_heavy';
