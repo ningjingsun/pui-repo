@@ -25,24 +25,26 @@
                 </div>
             </div>
             <div id=overview_flex>
-                <div class=flex_child1>
-                    <p class=overview_title id=compare>Compare</p>
-                    <p class=overview_title id=compose>Compose</p>
-                </div>
-                <div class=flex_child2>
-                    <p class=overview_title id=detect>Detect</p>
-                    <p class=overview_title id=discover>Discover</p>
-                    <p class=overview_title id=estimate>Estimate</p>
-                </div>
-                <div class=flex_child3>
-                    <p class=overview_title id=forecast>Forecast</p>
-                    <p class=overview_title id=identify>Identify</p>
+                <div id=overview_inside>
+                    <div class=flex_child1>
+                        <p class=overview_title id=compare_p>Compare</p>
+                        <p class=overview_title id=compose_p>Compose</p>
+                    </div>
+                    <div class=flex_child2>
+                        <p class=overview_title id=detect_p>Detect</p>
+                        <p class=overview_title id=discover_p>Discover</p>
+                        <p class=overview_title id=estimate_p>Estimate</p>
+                    </div>
+                    <div class=flex_child3>
+                        <p class=overview_title id=forecast_p>Forecast</p>
+                        <p class=overview_title id=identify_p>Identify</p>
+                    </div>
                 </div>
             </div>
         </div>
         <script>
             $(document).ready(function(){
-                $("#compare").click(function(){
+                $("#compare_p").click(function(){
                     $("#modal_background").show();
                 });
                 $("#modal_background").click(function(){
