@@ -78,7 +78,7 @@ a{
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
-    gap: 4vw;
+    /* gap: 4vw; */
     /* padding-top: 1vw; */
     padding-top: 13px;
 }
@@ -1085,4 +1085,7 @@ p{
 }
 #question_mark:hover{
     cursor: pointer;
+}
+.external_link:hover{
+    opacity: 0.5;
 }
