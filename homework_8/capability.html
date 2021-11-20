@@ -17,15 +17,15 @@
         <div id=modal_background style="display: none"></div>
         <div id=content>
             <div id=header>
-                <div id=logo>
+                <a href="overview.html"><div id=logo>
                     <p class=logo>AI can do...</p>
                     <br>
                     <br>
-                </div>
+                </div></a>
                 <div id=navigation>
-                    <div><a href="overview.html"><p class=navigation_tab>Overview</p></a></div>
-                    <div><a href="capability.html"><p>by Capability</p></a></div>
-                    <div><p class=navigation_tab>by Industry</p></div>
+                    <div style="margin-right: 4vw"><a href="overview.html"><p class=navigation_tab>Overview</p></a></div>
+                    <div style="margin-right: 4vw"><a href="capability.html"><p>by Capability</p></a></div>
+                    <div style="margin-right: 4vw"><a href="industry.html"><p class=navigation_tab>by Industry</p></a></div>
                     <div id=question_mark><p>&emsp;?&emsp;</p></div>
                 </div>
             </div>
@@ -59,7 +59,7 @@
                     <label class=tag for="forecast">&emsp;Forecast (16)</label>
                     <br>
                     <input type="checkbox" name="capability" id="identify" value="identify" onclick="filter_identify()" checked>
-                    <label class=tag for="identify">&emsp;Identify (44)</label>
+                    <label class=tag for="identify">&emsp;Identify (43)</label>
                     <br>
                     <br>
                     <br>
@@ -70,7 +70,7 @@
                     <label class=tag for="commerce">&emsp;Commerce & Sales (7)</label>
                     <br>
                     <input type="checkbox" name="industry" id="education" value="education" onclick="filter_education()" checked>
-                    <label class=tag for="education">&emsp;Education (14)</label>
+                    <label class=tag for="education">&emsp;Education (13)</label>
                     <br>
                     <input type="checkbox" name="industry" id="finance" value="finance" onclick="filter_finance()" checked>
                     <label class=tag for="finance">&emsp;Finance (9)</label>
@@ -1808,22 +1808,6 @@
                             </div>
                         </div></a>
 
-                        <div class="card identify_card card_hide identify_cards education_card">
-                            <div class="card_title identify_card_title">
-                                <p class=card_title_p>Identify</p>
-                            </div>
-                            <div class="card_text">
-                                <p class="identify_card_text">conversational response</p>
-                            </div>
-                            <div class="card_tag">
-                                <div class=tag0><p class="tag tag1">Education</p></div>
-                                    <div class=tag0><p class="tag tag1">Feedback Systems</p></div>
-                            </div>
-                            <div class="card_img">
-                                <img class="card_icon" src="img/feedback_system.png" alt="feedback_system">
-                            </div>
-                        </div>
-
                         <a href="link/identify_copyright_violation.html"><div class="card identify_card card_hide identify_cards leisure_card">
                             <div class="card_title identify_card_title">
                                 <p class=card_title_p>Identify</p>
@@ -2385,10 +2369,10 @@
                 <p style="font-size: 17px">This AI Taxonomy aims to support professional product designers, UX designers and startups to better envision and prototype new products and services that integate AI capabilities. 
                     <br>
                     <br>
-                    Each card represents a task that AI could do. You can sort through the cards by selecting “capability”, “industry” and “data type” at the top right bar. You can also use filters on the left side to filter cards, and click any card to view the workflow in details.
+                    Each card represents a task that AI could do. You can sort through the cards by selecting “by Capability” or "by Industry" at the top right bar. You can also use filters on the left side to filter cards, and click any card to view the workflow in details.
                     <br>
                     <br>
-                    This website is developed as part of the research project under the guidance of professor John Zimmerman, professor Jodi Forlizzi and Nur Yildirim. Enjoy!</p>
+                    This website is made by <a href=http://www.anitasun.me style="text-decoration: none; text-decoration: underline; color: rgb(0, 0, 0)" class=external_link>Anita Sun</a> as part of the research project under the guidance of professor John Zimmerman, professor Jodi Forlizzi and Nur Yildirim. Enjoy!</p>
                     <br>
                 <div id=close_button>
                     <span class="tag2 tag3 tag3_grey" style="margin-right: 8px; line-height: 18px">Start explore →</span>
