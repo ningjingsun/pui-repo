@@ -82,6 +82,14 @@ a{
     /* padding-top: 1vw; */
     padding-top: 13px;
 }
+.navigation_tab{
+    opacity: 0.3;
+    color: black;
+}
+.navigation_tab:hover{
+    opacity: 0.6;
+    color: black;
+}
 #card_content{
     margin: 70px;
     margin-left: 86px;
@@ -664,4 +672,88 @@ p{
     background-color: rgba(165, 69, 238, 0.15);
     border-color: rgb(165, 69, 238);
     color: rgb(146, 30, 235);
+}
+
+
+
+
+
+
+
+#overview_flex{
+    padding-top: 18vh;
+}
+.flex_child1{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    row-gap: 2vw;
+    column-gap: 0vw;
+    padding-top: 2vh;
+}
+.flex_child2{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    row-gap: 2vw;
+    column-gap: 0vw;
+    padding-top: 2vh;
+}
+.flex_child3{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    row-gap: 2vw;
+    column-gap: 0vw;
+    padding-top: 2vh;
+}
+.overview_title{
+    font-size: 120px;
+    height: 160px;
+    font-family: 'aspira_black';
+    font-style: blackfont;
+    color: rgb(230, 230, 230);
+    padding-left: 30px;
+    padding-right: 30px;
+}
+#compare:hover{
+    color: rgb(255, 61, 13);
+    transform: rotate(-7deg); 
+    transition-duration: 0.2s;
+}
+#compose:hover{
+    color: rgb(0, 162, 255);
+    transform: rotate(7deg); 
+    transition-duration: 0.2s;
+}
+#detect:hover{
+    color: rgb(255, 133, 20);
+    transform: rotate(7deg); 
+    transition-duration: 0.2s;
+}
+#discover:hover{
+    color: rgb(165, 69, 238);
+    transform: rotate(-7deg); 
+    transition-duration: 0.2s;
+}
+#estimate:hover{
+    color: rgb(255, 82, 166);
+    transform: rotate(7deg); 
+    transition-duration: 0.2s;
+}
+#forecast:hover{
+    color: rgb(0, 204, 10);
+    transform: rotate(-7deg); 
+    transition-duration: 0.2s;
+}
+#identify:hover{
+    color: rgb(20, 102, 255);
+    transform: rotate(7deg); 
+    transition-duration: 0.2s;
 }
