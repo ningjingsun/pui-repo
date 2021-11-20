@@ -46,13 +46,91 @@
                 </div>
             </div>
         </div>
+        <div class="window compare_window_show" style="display: none">
+            <div class=close>
+                <img class=close_icon src="img/close.png" alt="">
+            </div>
+            <div id=compare_window>
+                <p id=compare_window_title>Compare</p>
+                <br>
+                <br>
+                <p style="font-family: 'aspira_heavy'; font-size: 17px">Definition:</p><p style="font-size: 17px">Compare entities within a corpus of similar entities. Organize a collection of entities based on intention to maximize or minimize some outcome.</p>
+                <br>
+                <p style="font-family: 'aspira_heavy'; font-size: 17px">Synonyms:</p><p style="font-size: 17px">Rank, Order, Find Best, Find Fastest, Find Cheapest, Recommend</p>
+                <br>
+                <p style="font-family: 'aspira_heavy'; font-size: 17px">Examples:</p><p style="font-size: 17px">Rank a set of products based on the liklihood a customer might want to buy them. Generate a stream of socialmedia posts to maximize the time a customer spends looking at the media.</p>
+                <br>
+                <!-- <p style="font-family: 'aspira_heavy'; font-size: 17px">Common Applications:</p> -->
+                <div style="height: 7px"></div>
+                <!-- <p style="font-size: 17px">Things to buy on Amazon; Media on Netflix</p>
+                <br> -->
+                <br>
+                <a href="link/compare_routes.html"><span class="tag2 tag3 tag3_red" style="margin-right: 8px">Compare the best routes</span></a>
+                <a href="link/compare_likely_next_word_for_partial_sentence.html"><span class="tag2 tag3 tag3_red">Compare likely next word for partial sentence</span></a>
+                <div class=window_examples></div>
+            </div>
+        </div>
+
+        <div class="window compose_window_show" style="display: none">
+            <div class=close>
+                <img class=close_icon src="img/close.png" alt="">
+            </div>
+            <div id=compose_window>
+                <p id=compose_window_title>Compose</p>
+                <br>
+                <br>
+                <p style="font-family: 'aspira_heavy'; font-size: 17px">Definition:</p><p style="font-size: 17px">Generate something new (message, image, sound) based on knowledge of similar things.</p>
+                <br>
+                <p style="font-family: 'aspira_heavy'; font-size: 17px">Synonyms:</p><p style="font-size: 17px">Make, Generate, Construct, Author</p>
+                <br>
+                <p style="font-family: 'aspira_heavy'; font-size: 17px">Examples:</p><p style="font-size: 17px">Answer this person's question. Make the agent sound like they are a teenager from France. Remove the chimey and fill in the image detail from where it was removed.</p>
+                <br>
+                <!-- <p style="font-family: 'aspira_heavy'; font-size: 17px">Common Applications:</p> -->
+                <div style="height: 7px"></div>
+                <!-- <p style="font-size: 17px">Things to buy on Amazon; Media on Netflix</p>
+                <br> -->
+                <br>
+                <a href="link/generate_the_missing_or_damaged_parts_of_existing_image.html"><span class="tag2 tag3 tag3_blue" style="margin-right: 8px">Compose the missing or damaged parts of existing images</span></a>
+                <br>
+                <br>
+                <br>
+                <a href="link/compose_the_driving_path.html"><span class="tag2 tag3 tag3_blue" style="margin-right: 8px">Compose the driving path</span></a>
+                <a href="link/compose_text_from_speech.html"><span class="tag2 tag3 tag3_blue">Compose text from speech (video content)</span></a>
+                <div class=window_examples></div>
+            </div>
+        </div>
         <script>
             $(document).ready(function(){
                 $("#compare_p").click(function(){
                     $("#modal_background").show();
+                    $(".compare_window_show").show();
+                    $(".close_icon").show();
                 });
                 $("#modal_background").click(function(){
                     $("#modal_background").hide();
+                    $(".compare_window_show").hide();
+                });
+                $(".close_icon").click(function(){
+                    $("#modal_background").hide();
+                    $(".compare_window_show").hide();
+                    $(".close_icon").hide();
+                });
+            });
+
+            $(document).ready(function(){
+                $("#compose_p").click(function(){
+                    $("#modal_background").show();
+                    $(".compose_window_show").show();
+                    $(".close_icon").show();
+                });
+                $("#modal_background").click(function(){
+                    $("#modal_background").hide();
+                    $(".compose_window_show").hide();
+                });
+                $(".close_icon").click(function(){
+                    $("#modal_background").hide();
+                    $(".compose_window_show").hide();
+                    $(".close_icon").hide();
                 });
             });
         </script>
