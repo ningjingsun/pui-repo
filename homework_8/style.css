@@ -757,3 +757,13 @@ p{
     transform: rotate(7deg); 
     transition-duration: 0.2s;
 }
+#modal_background{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 100;
+}
