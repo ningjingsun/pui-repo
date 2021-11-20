@@ -25,7 +25,7 @@
                     <div><a href="overview.html"><p>Overview</p></a></div>
                     <div><a href="capability.html"><p class=navigation_tab>by Capability</p></a></div>
                     <div><p class=navigation_tab>by Industry</p></div>
-                    <div><p>?</p></div>
+                    <div id=question_mark><p>&emsp;?&emsp;</p></div>
                 </div>
             </div>
             <div id=overview_flex>
@@ -246,7 +246,44 @@
             </div>
         </div>
 
+        <div class="window question_window_show" style="display: none">
+            <!-- <div class=close style="margin-bottom: 10px">
+                <img class=close_icon src="img/close.png" alt="" style="margin-bottom: 300px">
+            </div> -->
+            <div id=question_window style="padding-top: 60px">
+                <p style="font-size: 17px">This AI Taxonomy aims to support professional product designers, UX designers and startups to better envision and prototype new products and services that integate AI capabilities. 
+                    <br>
+                    <br>
+                    Each card represents a task that AI could do. You can sort through the cards by selecting “capability”, “industry” and “data type” at the top right bar. You can also use filters on the left side to filter cards, and click any card to view the workflow in details.
+                    <br>
+                    <br>
+                    This website is developed as part of the research project under the guidance of professor John Zimmerman, professor Jodi Forlizzi and Nur Yildirim. Enjoy!</p>
+                    <br>
+                <div id=close_button>
+                    <span class="tag2 tag3 tag3_grey" style="margin-right: 8px; line-height: 18px">Start explore →</span>
+                </div>
+            </div>
+        </div>
+
         <script>
+            $(document).ready(function(){
+                $("#question_mark").click(function(){
+                    $("#modal_background").show();
+                    $(".question_window_show").show();
+                    $("#close_button").show();
+                });
+                $("#modal_background").click(function(){
+                    $("#modal_background").hide();
+                    $(".question_window_show").hide();
+                    $("#close_button").hide();
+                });
+                $("#close_button").click(function(){
+                    $("#modal_background").hide();
+                    $(".question_window_show").hide();
+                    $("#close_button").hide();
+                });
+            });
+
             $(document).ready(function(){
                 $("#compare_p").click(function(){
                     $("#modal_background").show();
