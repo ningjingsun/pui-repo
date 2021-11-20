@@ -48,7 +48,7 @@
         </div>
         <div class="window compare_window_show" style="display: none">
             <div class=close>
-                <img class=close_icon src="img/close.png" alt="">
+                <img class=close_icon src="img/close.png" alt="" style="margin-bottom: 460px">
             </div>
             <div id=compare_window>
                 <p id=compare_window_title>Compare</p>
@@ -188,6 +188,64 @@
             </div>
         </div>
 
+        <div class="window forecast_window_show" style="display: none">
+            <div class=close>
+                <img class=close_icon src="img/close.png" alt="" style="margin-bottom: 460px">
+            </div>
+            <div id=forecast_window>
+                <p id=forecast_window_title>Forecast</p>
+                <br>
+                <br>
+                <p style="font-family: 'aspira_heavy'; font-size: 17px">Definition:</p><p style="font-size: 17px">Infer a future value (stock price, sales, weather, chance of something being true) based on current conditions and history. Infer a peak or valley in a trend line (minimum or maximum).</p>
+                <br>
+                <p style="font-family: 'aspira_heavy'; font-size: 17px">Synonyms:</p><p style="font-size: 17px">Predict, Guess, Speculate</p>
+                <br>
+                <p style="font-family: 'aspira_heavy'; font-size: 17px">Examples:</p><p style="font-size: 17px">When is the best time to buy a specific stock? What will the weather be tomorrow? How much can I sell my home for in a year? </p>
+                <br>
+                <!-- <p style="font-family: 'aspira_heavy'; font-size: 17px">Common Applications:</p> -->
+                <div style="height: 7px"></div>
+                <!-- <p style="font-size: 17px">Things to buy on Amazon; Media on Netflix</p>
+                <br> -->
+                <br>
+                <a href="link/forecast_crop_yield.html"><span class="tag2 tag3 tag3_green" style="margin-right: 8px">Forecast crop yield</span></a>
+                <a href="link/predict_likelihood_of_system_breakdown.html"><span class="tag2 tag3 tag3_green">Forecast likelihood of system breakdown</span></a>
+                <br>
+                <br>
+                <br>
+                <a href="link/forecast_usage_peaks_and_valleys.html"><span class="tag2 tag3 tag3_green">Forecast usage peaks and valleys</span></a>
+                <div class=window_examples></div>
+            </div>
+        </div>
+
+        <div class="window identify_window_show" style="display: none">
+            <div class=close>
+                <img class=close_icon src="img/close.png" alt="" style="margin-bottom: 490px">
+            </div>
+            <div id=identify_window>
+                <p id=identify_window_title>Identify</p>
+                <br>
+                <br>
+                <p style="font-family: 'aspira_heavy'; font-size: 17px">Definition:</p><p style="font-size: 17px">Notice if a specific item or class of items shows up in a set of like times.</p>
+                <br>
+                <p style="font-family: 'aspira_heavy'; font-size: 17px">Synonyms:</p><p style="font-size: 17px">Recognize, Discern, Find, Notice</p>
+                <br>
+                <p style="font-family: 'aspira_heavy'; font-size: 17px">Examples:</p><p style="font-size: 17px">Does this image of a face show your friend Mary? Is this message span or not spam? What kind of cat is that?</p>
+                <br>
+                <!-- <p style="font-family: 'aspira_heavy'; font-size: 17px">Common Applications:</p> -->
+                <div style="height: 7px"></div>
+                <!-- <p style="font-size: 17px">Things to buy on Amazon; Media on Netflix</p>
+                <br> -->
+                <br>
+                <a href="link/identify_anomalies_as_tumors_or_not.html"><span class="tag2 tag3 tag3_darkblue" style="margin-right: 8px">Identify anomalies as tumors or not</span></a>
+                <a href="link/identify_emotion_in_face_image.html"><span class="tag2 tag3 tag3_darkblue">Identify emotion in face image</span></a>
+                <br>
+                <br>
+                <br>
+                <a href="link/identify_key_data_points.html"><span class="tag2 tag3 tag3_darkblue">Identify key data points from documents</span></a>
+                <div class=window_examples></div>
+            </div>
+        </div>
+
         <script>
             $(document).ready(function(){
                 $("#compare_p").click(function(){
@@ -270,6 +328,40 @@
                 $(".close_icon").click(function(){
                     $("#modal_background").hide();
                     $(".estimate_window_show").hide();
+                    $(".close_icon").hide();
+                });
+            });
+
+            $(document).ready(function(){
+                $("#forecast_p").click(function(){
+                    $("#modal_background").show();
+                    $(".forecast_window_show").show();
+                    $(".close_icon").show();
+                });
+                $("#modal_background").click(function(){
+                    $("#modal_background").hide();
+                    $(".forecast_window_show").hide();
+                });
+                $(".close_icon").click(function(){
+                    $("#modal_background").hide();
+                    $(".forecast_window_show").hide();
+                    $(".close_icon").hide();
+                });
+            });
+
+            $(document).ready(function(){
+                $("#identify_p").click(function(){
+                    $("#modal_background").show();
+                    $(".identify_window_show").show();
+                    $(".close_icon").show();
+                });
+                $("#modal_background").click(function(){
+                    $("#modal_background").hide();
+                    $(".identify_window_show").hide();
+                });
+                $(".close_icon").click(function(){
+                    $("#modal_background").hide();
+                    $(".identify_window_show").hide();
                     $(".close_icon").hide();
                 });
             });
