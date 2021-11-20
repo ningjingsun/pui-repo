@@ -123,8 +123,8 @@ a{
     /* padding-left: 0.5vw; */
     padding-left: 7px;
     /* padding-right: 1vw; */
-    padding-right: 24px;
-    width: 18%;
+    padding-right: 0px;
+    width: 20%;
     padding-bottom: 40px;
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
     scrollbar-width: none;  /* Firefox */
@@ -136,7 +136,7 @@ a{
     float: left;
     overflow-x: hidden;
     overflow-y: scroll;
-    padding-left: 5.6vw;
+    padding-left: 5.2vw;
     padding-right: 20px;
     /* padding-bottom: 20px; */
     width: 82%;
@@ -193,7 +193,7 @@ p{
     color: rgb(50, 50, 50);
     font-size: 16px;
     /* line-height: 2.2vw; */
-    line-height: 29px;
+    line-height: 30px;
 }
 .title{
     font-family: 'aspira_heavy';
@@ -223,8 +223,8 @@ p{
 .card{
     /* width: 13.8vw;
     height: 16.4vw;  */
-    width: 223px;
-    height: 274px;
+    width: 214px;
+    height: 272px;
     background-color: white;
     /* border-radius: 1vw; */
     border-radius: 16.6px;
@@ -288,6 +288,7 @@ p{
     border-radius: 40px;
     background-color: rgb(228, 78, 40);
     padding: 10px;
+    padding-bottom: 9px;
     padding-left: 17px;
 }
 .compare_card_title{
@@ -374,7 +375,7 @@ p{
     font-family: "aspira_light";
 } */
 .card_tag{
-    margin-top: 31px;
+    margin-top: 30px;
 }
 .tag0{
     margin-top: 15px;
@@ -389,9 +390,9 @@ p{
     /* padding: 0.7vw; */
     padding: 11px;
     /* padding-left: 1vw; */
-    padding-left: 18px;
+    padding-left: 16px;
     /* padding-right: 1vw; */
-    padding-right: 18px;
+    padding-right: 16px;
     width: auto;
     /* font-size: 0.8vw; */
     font-size: 14px;
@@ -692,7 +693,7 @@ p{
 
 
 #overview_flex{
-    padding-top: 24vh;
+    padding-top: 23vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -733,9 +734,17 @@ p{
     font-family: 'aspira_black';
     font-style: blackfont;
     color: rgb(230, 230, 230);
-    padding-left: 28px;
-    padding-right: 28px;
+    padding-left: 9px;
+    padding-right: 30px;
     letter-spacing: -2px;
+}
+.overview_title:hover{
+    cursor: help;
+}
+.overview_title_number{
+    font-size: 19px;
+    opacity: 0.5;
+    padding-left: 30px;
 }
 #compare_p:hover{
     color: rgb(255, 61, 13);
@@ -781,4 +790,43 @@ p{
     background-color: black;
     opacity: 0.5;
     z-index: 100;
+}
+
+
+
+
+
+
+
+
+
+.browserWidthCatch {
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 200;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1c2937;
+    background: white;
+    color: #ffbb7c;
+    font-family: "noto-sans";
+    transition: 0.4s opacity;
+    pointer-events: none;
+  }
+@media only screen and (max-width: 890px) {
+    .browserWidthCatch {
+      opacity: 100%;
+    }
+}
+@media (max-width: 450px) {
+    .browserWidthCatch p {
+      width: 280px;
+    }
 }
