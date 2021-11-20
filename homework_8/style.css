@@ -173,7 +173,7 @@ input[type=checkbox]{
     font-family: 'aspira_bold';
     font-style: bold;
     color: rgb(50, 50, 50); 
-    font-size: 40px;
+    font-size: 36px;
     line-height: 44px;
 }
 p{
@@ -238,30 +238,41 @@ p{
 }
 .compare_cards{
     border: solid rgb(255, 61, 13);
+    border: solid rgb(220, 220, 220);
     border-width: 1.3px;
 }
+/* .compare_cards:hover{
+    border: solid rgba(255, 61, 13, 0.7);
+    border-width: 1.3px;
+} */
 .compose_cards{
     border: solid rgb(0, 162, 255);
+    border: solid rgb(220, 220, 220);
     border-width: 1.3px;
 }
 .detect_cards{
     border: solid rgb(255, 133, 18);
+    border: solid rgb(220, 220, 220);
     border-width: 1.3px;
 }
 .discover_cards{
     border: solid rgb(255, 82, 166);
+    border: solid rgb(220, 220, 220);
     border-width: 1.3px;
 }
 .estimate_cards{
     border: solid rgb(165, 69, 238);
+    border: solid rgb(220, 220, 220);
     border-width: 1.3px;
 }
 .forecast_cards{
     border: solid rgb(0, 204, 10);
+    border: solid rgb(220, 220, 220);
     border-width: 1.3px;
 }
 .identify_cards{
     border: solid rgb(20, 102, 255);
+    border: solid rgb(220, 220, 220);
     border-width: 1.3px;
 }
 /* .act_cards{
@@ -269,7 +280,7 @@ p{
     border-width: 1.3px;
 } */
 .card:hover{
-    transform: translate(-10px, -10px);
+    transform: translate(-6px, -6px);
     transition-timing-function: ease-in;
     transition-duration: 0.1s;
 }
@@ -363,10 +374,10 @@ p{
     font-family: "aspira_light";
 } */
 .card_tag{
-    margin-top: 32px;
+    margin-top: 31px;
 }
 .tag0{
-    margin-top: 17px;
+    margin-top: 15px;
 }
 .tag1{
     position: relative;
@@ -681,7 +692,10 @@ p{
 
 
 #overview_flex{
-    padding-top: 18vh;
+    padding-top: 24vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .flex_child1{
     display: flex;
@@ -714,45 +728,46 @@ p{
     padding-top: 2vh;
 }
 .overview_title{
-    font-size: 120px;
-    height: 160px;
+    font-size: 7.4vw;
+    height: 8.2vw;
     font-family: 'aspira_black';
     font-style: blackfont;
     color: rgb(230, 230, 230);
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 28px;
+    padding-right: 28px;
+    letter-spacing: -2px;
 }
-#compare:hover{
+#compare_p:hover{
     color: rgb(255, 61, 13);
     transform: rotate(-7deg); 
     transition-duration: 0.2s;
 }
-#compose:hover{
+#compose_p:hover{
     color: rgb(0, 162, 255);
     transform: rotate(7deg); 
     transition-duration: 0.2s;
 }
-#detect:hover{
+#detect_p:hover{
     color: rgb(255, 133, 20);
     transform: rotate(7deg); 
     transition-duration: 0.2s;
 }
-#discover:hover{
+#discover_p:hover{
     color: rgb(165, 69, 238);
     transform: rotate(-7deg); 
     transition-duration: 0.2s;
 }
-#estimate:hover{
+#estimate_p:hover{
     color: rgb(255, 82, 166);
     transform: rotate(7deg); 
     transition-duration: 0.2s;
 }
-#forecast:hover{
+#forecast_p:hover{
     color: rgb(0, 204, 10);
     transform: rotate(-7deg); 
     transition-duration: 0.2s;
 }
-#identify:hover{
+#identify_p:hover{
     color: rgb(20, 102, 255);
     transform: rotate(7deg); 
     transition-duration: 0.2s;
