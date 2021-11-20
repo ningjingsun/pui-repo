@@ -945,6 +945,42 @@ p{
     border-width: 1.3px;
     z-index: 300;
 }
+#forecast_window{
+    border-color: rgba(0, 0, 0, 0.2);
+    border: 1px;
+    border-style: solid;
+    width: 700px;
+    height: 320px;
+    height: auto;
+    position: absolute;
+    background-color: white;
+    border-radius: 24px;
+    padding: 60px;
+    padding-top: 50px;
+    padding-bottom: 70px;
+    box-shadow: 0px 4px 20px 2px rgba(0, 0, 0, 0.12);
+    border: solid rgb(220, 220, 220);
+    border-width: 1.3px;
+    z-index: 300;
+}
+#identify_window{
+    border-color: rgba(0, 0, 0, 0.2);
+    border: 1px;
+    border-style: solid;
+    width: 700px;
+    height: 320px;
+    height: auto;
+    position: absolute;
+    background-color: white;
+    border-radius: 24px;
+    padding: 60px;
+    padding-top: 50px;
+    padding-bottom: 70px;
+    box-shadow: 0px 4px 20px 2px rgba(0, 0, 0, 0.12);
+    border: solid rgb(220, 220, 220);
+    border-width: 1.3px;
+    z-index: 300;
+}
 #compare_window_title{
     color: rgb(255, 61, 13);
     font-family: 'aspira_heavy';
@@ -980,12 +1016,26 @@ p{
     font-size: 35px;
     line-height: 40px;
 }
+#forecast_window_title{
+    color: rgb(0, 204, 10);
+    font-family: 'aspira_heavy';
+    font-style: heavy;
+    font-size: 35px;
+    line-height: 40px;
+}
+#identify_window_title{
+    color: rgb(20, 102, 255);
+    font-family: 'aspira_heavy';
+    font-style: heavy;
+    font-size: 35px;
+    line-height: 40px;
+}
 .close_icon{
     height: 30px;
     position: relative;
     z-index: 400;
     margin-left: 680px;
-    margin-bottom: 420px;
+    margin-bottom: 440px;
     opacity: 0.2;
 }
 .close_icon:hover{
