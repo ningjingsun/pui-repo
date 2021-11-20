@@ -9,6 +9,7 @@
         <title>AI Taxonomy</title>
     </head>
     <body>
+        <div id=modal_background style="display: none"></div>
         <div id=content>
             <div id=header>
                 <div id=logo>
@@ -39,5 +40,15 @@
                 </div>
             </div>
         </div>
+        <script>
+            $(document).ready(function(){
+                $("#compare").click(function(){
+                    $("#modal_background").show();
+                });
+                $("#modal_background").click(function(){
+                    $("#modal_background").hide();
+                });
+            });
+        </script>
     </body>
 </html>
