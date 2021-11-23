@@ -2464,7 +2464,21 @@
             }
 
 
+            // Dynamically generating cards:
+            // template for html, card template, 
+            // template of all the contents, populating card with contents
 
+            // cloneNode() function, copy template node
+            // have all the info in a database structure(for real), json file
+            // or a big json string
+            // filter entire lists; loop & search through lists, check if the tag matches
+
+            // allCards = [{},{},{}]
+            // {title:’best routes’, capability: ‘compare’, industries: ‘transportation’}
+            // use filtering functions: allCards.filter()
+            // allCards.filter( card => card.capability == ‘compare’)
+            // matchingCards = allCards.filter( card => card.capability == ‘compare’)
+            // for (card in matchingCards) { addCopiedTemplate() }
             function filter_act(){
                 var checkBox = document.getElementById('act');
                 var cardBox = document.getElementById('act_cardbox');
